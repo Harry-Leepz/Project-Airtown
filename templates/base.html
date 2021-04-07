@@ -7,17 +7,19 @@
 <meta name="Description" content="Enter your description here"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}" type="text/css">
 <title>Air Town - Home Page</title>
 </head>
 <body>
 <!-- Navbar Section Starts -->
     <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-
+    
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span><i class="fas fa-bars"></i></span>
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fas fa-bars"></i></span>
             </button>
     
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -46,12 +48,14 @@
             </div>
         </div>
     </nav>
+<!-- Navbar Section Ends -->    
     {% block content %}
 
     {% endblock %}
-<!-- Navbar Section Ends -->
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="{{ url_for ('static', filename='js/script.js')}}"></script>
 </body>
 </html>
