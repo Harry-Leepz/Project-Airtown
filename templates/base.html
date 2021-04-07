@@ -12,7 +12,7 @@
 </head>
 <body>
 <!-- Navbar Section Starts -->
-     <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
 
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -46,6 +46,9 @@
             </div>
         </div>
     </nav>
+    {% block content %}
+
+    {% endblock %}
 <!-- Navbar Section Ends -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
