@@ -28,6 +28,28 @@ def get_posts():
 
 @app.route("/sign_up", methods=["GET", "POST"])
 def sign_up():
+    if request.method == "POST":
+        # Check if username already exists in the database
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        if existing_user:
+            # If Username exists then flash message
+            # and redirect back to signup page
+            flash("Username already exists, Please try another Username")
+            return redirect(url_for("sign_up"))
+
+        # Take user input and place as users in database
+        sign_up = {
+            "username": request.form.get("username").lower(),
+            "firstname": request.form.get("firstname").lower(),
+            "lastname": request.form.get("lastname").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(sign_up)
+
+        # Place new user into "session" cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Sign Up complete, Welcome to Air Town")
     return render_template("sign-up.html")
 
 
