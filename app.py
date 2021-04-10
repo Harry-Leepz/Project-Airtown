@@ -63,12 +63,13 @@ def login():
         if existing_user:
             # Check user password input versus database password
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome {}".format(
-                        request. form.get("username")))
-                    return redirect(url_for(
-                        "account", username=session["user"]))
+                existing_user["password"], request.form.get("password")
+            ):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome {}".format(
+                    request. form.get("username")))
+                return redirect(url_for(
+                    "account", username=session["user"]))
             else:
                 # Display message for incorrect password
                 flash("Incorrect Username/Password")
@@ -98,8 +99,9 @@ def signout():
 
 @app.route("/the_wall")
 def the_wall():
-    posts = mongo.db.posts.find()
-    return render_template("wall.html", posts=posts)
+    posts = list(mongo.db.posts.find())
+    users = list(mongo.db.users.find())
+    return render_template("wall.html", posts=posts, users=users)
 
 
 if __name__ == "__main__":

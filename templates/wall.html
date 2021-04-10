@@ -1,29 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% for post in posts %}
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-md-10 col-sm-12 col-lg-6 col-12">
-                    
-                    <div class="card text-white bg-dark mb-3">
-                        <h5 class="card-header">{{ post.category_name }}</h5>
-                        <div class="card-body">
-                        <h5 class="card-title">{{ post.post_title }}</h5>
-                        <p class="card-text">{{ post.post_content }}.</p>
-                        </div>
-                    </div>
+<!-- The Wall Section Starts -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-sm-12 col-lg-6 col-12">
+                <!-- Posts Starts -->
+                <ul>
+                    {% for post in posts %}
+                        <li>
+                            <div class="card text-white bg-dark mb-3">
+                                <h6 class="card-header">
+                                    {{ post.post_author }}
 
-                    <div class="card text-white bg-dark mb-3">
-                        <h5 class="card-header">{{ post.category_name }}</h5>
-                        <div class="card-body">
-                            <h5 class="card-title">{{ post.post_title }}</h5>
-                            <p class="card-text">{{ post.post_content }}</p>
-                        </div>
-                    </div>
-
-                </div>
+                                </h6>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        {{ post.post_title }}
+                                    </h5>
+                                    <h6>
+                                        {{ post.category_name }} 
+                                    </h6>
+                                    <p class="card-text">
+                                        {{ post.post_content }}
+                                    </p>
+                                </div>
+                            </div>
+                        </li>   
+                    {% endfor %}    
+                </ul>
+            <!-- Posts Ends -->
             </div>
         </div>
-    {% endfor %}
+    </div>
+<!-- The Wall Section Ends -->
 {% endblock %}
