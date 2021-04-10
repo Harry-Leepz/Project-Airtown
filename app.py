@@ -100,8 +100,12 @@ def signout():
 @app.route("/the_wall")
 def the_wall():
     posts = list(mongo.db.posts.find())
-    users = list(mongo.db.users.find())
-    return render_template("wall.html", posts=posts, users=users)
+    return render_template("wall.html", posts=posts)
+
+
+@app.route("/new_post")
+def new_post():
+    return render_template("wall.html")
 
 
 if __name__ == "__main__":

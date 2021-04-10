@@ -1,18 +1,56 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- The Wall Section Starts -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>
+                    What's on your mind ?
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="">
+                    <div class="form-group">
+                        <input class="form-control form-control-sm" type="text" placeholder="Give your post a title!">
+                        <select class="form-control form-control-sm" aria-placeholder="Type of post">
+                            <option>Humble Brag</option>
+                            <option>Simple Review</option>
+                            <option>Honest Opinion</option>
+                          </select>
+                        <input class="form-control form-control-sm" type="text" placeholder="Your thoughts!">
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Post</button>
+            </div>    
+        </div>
+    </div>
+</div>
+
+<!-- The Wall Post Section Starts -->
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-10 col-sm-12 col-lg-6 col-12">
+                {% if session.user %}
+                <button type="button " class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                    Create New Post
+                </button>
+                {% endif %}
                 <!-- Posts Starts -->
                 <ul>
                     {% for post in posts %}
                         <li>
-                            <div class="card text-white bg-dark mb-3">
+                            <div class="card text-white bg-dark mt-1 mb-3">
                                 <h6 class="card-header">
-                                    {{ post.post_author }}
-
+                                   adhahdkahd
                                 </h6>
                                 <div class="card-body">
                                     <h5 class="card-title">
@@ -33,5 +71,6 @@
             </div>
         </div>
     </div>
-<!-- The Wall Section Ends -->
+
+<!-- The Wall Post Section Ends -->
 {% endblock %}
