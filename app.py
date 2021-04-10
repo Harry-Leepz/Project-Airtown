@@ -104,9 +104,18 @@ def the_wall():
     return render_template("wall.html", posts=posts, categories=categories)
 
 
-@app.route("/new_post")
+@app.route("/the_wall", methods=["GET", "POST"])
 def new_post():
-    return render_template("wall.html")
+    if request.method == "POST":
+        post = {
+            "post_author": session["user"],
+            "post_title": request.form.get("post_title"),
+            "category_name": request.form.get("category_name"),
+            "post_content": request.form.get("post_content")
+        }
+        mongo.db.posts.insert_one(post)
+        flash("Sucessfully posted on The Wall")
+        return redirect(url_for("the_wall"))
 
 
 if __name__ == "__main__":
