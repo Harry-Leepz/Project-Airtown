@@ -17,15 +17,20 @@
             <div class="modal-body">
                 <form method="POST" action="">
                     <div class="form-group">
-                        <input class="form-control form-control-sm" type="text" placeholder="Give your post a title!">
-                        <select class="form-control form-control-sm" aria-placeholder="Type of post">
-                            <option>Humble Brag</option>
-                            <option>Simple Review</option>
-                            <option>Honest Opinion</option>
-                          </select>
-                        <input class="form-control form-control-sm" type="text" placeholder="Your thoughts!">
+                        <input class="form-control form-control-sm" maxlength="50" minlength="5" 
+                        id="post_title" name="post_title" type="text" placeholder="Give your post a title!" required>
+                        <select id="category_name" name="category_name" class="form-control form-control-sm" aria-placeholder="Choose a post tpe" required>
+                            {% for category in categories %}
+                                <option>
+                                    {{ category.category_name }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <textarea rows="3" class="form-control form-control-sm" minlength="5" maxlength="500" 
+                        id="post_content" name="post_content" type="text" placeholder="Your thoughts!" required>
+                        </textarea>
                     </div>
-                  </form>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>

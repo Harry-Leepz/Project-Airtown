@@ -83,7 +83,7 @@ def login():
 
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
-    # Obtaining the session user's username for the database
+    # Obtaining the session user's username from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     return render_template("account.html", username=username)
@@ -100,7 +100,8 @@ def signout():
 @app.route("/the_wall")
 def the_wall():
     posts = list(mongo.db.posts.find())
-    return render_template("wall.html", posts=posts)
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("wall.html", posts=posts, categories=categories)
 
 
 @app.route("/new_post")
