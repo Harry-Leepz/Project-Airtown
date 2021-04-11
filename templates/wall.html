@@ -57,8 +57,10 @@
                                         </h5>
                                     </div>
                                     <div class="col-3">
-                                        <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post </a>      
-                                        <a href="" class="btn btn-danger text-right" >Delete Post</a>
+                                        {% if session.user|lower == post.post_author|lower %}
+                                            <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post </a>      
+                                            <a href="" class="btn btn-danger text-right" >Delete Post</a>
+                                        {% endif %}
                                     </div>
                                 </div>    
                                 <div class="card-body">
