@@ -10,24 +10,32 @@
                         <!-- Post Title-->
                         <div class="form-group">
                             <input class="form-control" maxlength="50" minlength="5" id="post_title" name="post_title"
-                            type="text" placeholder="Give your post a title!" required>
+                            type="text" placeholder="Give your post a title!" value="{{ post.post_title }}" required>
                         </div>
                         <!-- Post Category Selection-->
                         <select id="category_name" name="category_name" class="form-control mb-3"
                             aria-placeholder="Choose a post type" required>
                             {% for category in categories %}
-                            <option>
-                                {{ category.category_name }}
-                            </option>
+                                {% if category.category_name == post.category_name %}
+                                    <option value="{{ category.category_name }}" selected>
+                                        {{ category.category_name }}
+                                    </option>
+                                {% else %}
+                                    <option>
+                                        {{ category.category_name }}
+                                    </option>
+                                {% endif %}
                             {% endfor %}
                         </select>
                         <!-- Post Content-->
                         <div class="form-group">
                             <textarea rows="3" class="form-control" minlength="5" maxlength="500" id="post_content"
                                 name="post_content" type="text" placeholder="Your thoughts!" required>
-                                </textarea>
+                            {{- post.post_content -}}
+                            </textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Edit Post</button>
+                        <a href="{{ url_for('the_wall')}}" class="btn btn-warning"> Cancel changes!</a>
+                        <button type="submit" class="btn btn-primary">Edit Post!</button>
                     </form>
                 </div>
             </div>
