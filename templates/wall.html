@@ -51,18 +51,19 @@
                     {% for post in posts %}
                         <li>
                             <div class="card text-white bg-dark mt-1 mb-3">
-                                <h6 class="card-header">
-                                   {{ post.post_author }}
-                                </h6>
-                                <div class="card-body">
+                                <div class="card-header">
                                     <h5 class="card-title">
-                                        {{ post.post_title }}
+                                        {{ post.post_title }} - {{ post.category_name }}
                                     </h5>
-                                    <h6>
-                                        {{ post.category_name }} 
-                                    </h6>
+                                    <button type="button" class="btn btn-secondary text-right">Edit Post</button>
+                                    <button type="button" class="btn btn-danger text-right">Delete Post</button>
+                                </div>
+                                <div class="card-body">
                                     <p class="card-text">
                                         {{ post.post_content }}
+                                    </p>
+                                    <p class="card-author">
+                                       Posted by {{ post.post_author.capitalize() }}
                                     </p>
                                 </div>
                             </div>
