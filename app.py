@@ -102,11 +102,11 @@ def the_wall():
     # Obtaining the posts collection from the database
     # Obtaining the categories collection from the data and sorting
     posts = list(mongo.db.posts.find())
-    categories = mongo.db.categories.find().sort("category_name", 1)
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("wall.html", posts=posts, categories=categories)
 
 
-@app.route("/the_wall", methods=["GET", "POST"])
+@app.route("/new_post", methods=["GET", "POST"])
 def new_post():
     # Inserting a new post into the database
     if request.method == "POST":
@@ -119,6 +119,15 @@ def new_post():
         mongo.db.posts.insert_one(post)
         flash("Sucessfully posted on The Wall")
         return redirect(url_for("the_wall"))
+
+
+@app.route("/edit_post/<post_id>", methods=["GET", "POST"])
+def edit_post(post_id):
+    # Editing a post in the database
+    post = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template(
+        "edit-post.html", post=post, categories=categories)
 
 
 if __name__ == "__main__":

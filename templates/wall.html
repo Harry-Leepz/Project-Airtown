@@ -2,8 +2,8 @@
 
 {% block content %}
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal for New Post -->
+<div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -19,7 +19,7 @@
                     <div class="form-group">
                         <input class="form-control form-control-sm" maxlength="50" minlength="5" 
                         id="post_title" name="post_title" type="text" placeholder="Give your post a title!" required>
-                        <select id="category_name" name="category_name" class="form-control form-control-sm" aria-placeholder="Choose a post tpe" required>
+                        <select id="category_name" name="category_name" class="form-control form-control-sm" aria-placeholder="Choose a post type" required>
                             {% for category in categories %}
                                 <option>
                                     {{ category.category_name }}
@@ -42,7 +42,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-sm-12 col-lg-6 col-12">
                 {% if session.user %}
-                <button type="button " class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                <button type="button " class="btn btn-warning" data-toggle="modal" data-target="#newPostModal">
                     Create New Post
                 </button>
                 {% endif %}
@@ -51,13 +51,17 @@
                     {% for post in posts %}
                         <li>
                             <div class="card text-white bg-dark mt-1 mb-3">
-                                <div class="card-header">
-                                    <h5 class="card-title">
-                                        {{ post.post_title }} - {{ post.category_name }}
-                                    </h5>
-                                    <button type="button" class="btn btn-secondary text-right">Edit Post</button>
-                                    <button type="button" class="btn btn-danger text-right">Delete Post</button>
-                                </div>
+                                <div class="row card-header">
+                                    <div class="col-9">
+                                        <h5 class="card-title">
+                                            {{ post.post_title }} - {{ post.category_name }}
+                                        </h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post </a>      
+                                        <a href="" class="btn btn-danger text-right" >Delete Post</a>
+                                    </div>
+                                </div>    
                                 <div class="card-body">
                                     <p class="card-text">
                                         {{ post.post_content }}
