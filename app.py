@@ -67,7 +67,7 @@ def login():
             ):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome {}".format(
-                    request. form.get("username")))
+                    request. form.get("username").capitalize()))
                 return redirect(url_for(
                     "account", username=session["user"]))
             else:
@@ -83,7 +83,7 @@ def login():
 
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
-    # Obtaining the session user's username from the database
+    # Obtaining the session user from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     return render_template("account.html", username=username)
@@ -99,6 +99,8 @@ def signout():
 
 @app.route("/the_wall")
 def the_wall():
+    # Obtaining the posts collection from the database
+    # Obtaining the categories collection from the data and sorting
     posts = list(mongo.db.posts.find())
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("wall.html", posts=posts, categories=categories)
@@ -106,6 +108,7 @@ def the_wall():
 
 @app.route("/the_wall", methods=["GET", "POST"])
 def new_post():
+    # Inserting a new post into the database
     if request.method == "POST":
         post = {
             "post_author": session["user"],
