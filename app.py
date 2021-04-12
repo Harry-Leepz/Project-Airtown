@@ -133,7 +133,6 @@ def edit_post(post_id):
         }
         mongo.db.posts.update({"_id": ObjectId(post_id)}, submit)
         flash("Post Updated!")
-
     post = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template(
@@ -142,6 +141,7 @@ def edit_post(post_id):
 
 @app.route("/delete_post/<post_id>")
 def delete_post(post_id):
+    # Deleting a post from the database
     mongo.db.posts.remove({"_id": ObjectId(post_id)})
     flash("Post Deleted!")
     return redirect(url_for("the_wall"))
