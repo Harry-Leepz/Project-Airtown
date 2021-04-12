@@ -28,3 +28,54 @@ Returning User goals :
 - As a returning user, I would like to share my posts and view other posts.
 - As a returning user, I would like to be able to edit my posts, to correct any errors or amend the posts to my liking.
 - As a returning user, I would to be able to delete my posts, ideally with some form of confirmation to protect me from missclicks.
+
+## Database Structure
+
+### Users
+```
+{
+    "_id": {
+        "$oid": "60746ec8dfc15759510dfa4e"
+    },
+    "username": "user_username",
+    "firstname": "user_firstname",
+    "lastname": "user_lastname",
+    "password": "user_password"
+}
+```
+
+### Posts
+```
+{
+    "_id": {
+        "$oid": "60746f74dfc15759510dfa4f"
+    },
+    "post_author": "Username",
+    "post_title": "Check me Out",
+    "category_name": "Humble Brag",
+    "post_content": "Hey, This is my test post!",
+    "image": ""
+}
+```
+
+### Post Categories
+```
+{
+    "_id": {
+        "$oid": "60746fd7dfc15759510dfa51"
+    },
+    "category_name": "Humble Brag"
+}
+{
+    "_id": {
+        "$oid": "60746feedfc15759510dfa52"
+    },
+    "category_name": "Simple Review"
+}
+{
+    "_id": {
+        "$oid": "60747003dfc15759510dfa53"
+    },
+    "category_name": "Honest Opinion"
+}
+```
