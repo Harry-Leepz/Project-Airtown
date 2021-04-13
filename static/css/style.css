@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background-color: #9e9e9e;
+    background-color: black;
 }
 
 .row {
@@ -24,29 +24,30 @@ body {
 
 .navbar-brand {
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: #fafafa;
     font-weight: 900;
     font-size: 1.6rem;
     letter-spacing: 4px;
     text-transform: uppercase;
+    margin-left: 5px;
 }
 
 .nav-link {
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: #fafafa;
     letter-spacing: 1px;
     font-weight: 700;
     margin-left: 10px;
-}
-
-.navbar-brand:hover {
-    color: black;
+    text-transform: uppercase;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
     color: #757575;
 }
-
+.navbar-toggler {
+color: #fafafa;
+font-size: 1.3rem;
+}
 /* Navbar CSS Ends */
 
 /* Page Heading CSS Starts */
