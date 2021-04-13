@@ -1,5 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<!-- Hero Image Section Starts -->
+    <section class="landing-page">
+        <div class="container-fluid home-heroimage">  
+            <div class="home-heroimage-text"> 
+                <h1 class="heroimage-text">Welcome to... </h1>
+                <h1 class="heroimage-text text-uppercase">Air Town</h1>
+            </div>
+        </div>
+    </section>
+<!-- Hero Image Section Ends -->
 
+<!-- Intro Text Starts -->
+    <div class="intro">
+        <div class="intro-text">
+            <h1 class="hide">
+                <span class="text">For sneaker lovers</span>
+            </h1>
+            <h1 class="hide">
+                <span class="text">By sneaker lovers</span>
+            </h1>
+        </div>
+    </div>
+<!-- Intro Text Ends  -->
 {% endblock %}
+
+<!-- Script Tags Start -->
+{% block scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" 
+    integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" 
+    crossorigin="anonymous">
+    </script>
+{% endblock %}
+<!-- Script Tags End -->
