@@ -42,18 +42,25 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #757575;
+    color: #ff0000;
 }
+
+.navbar-brand:hover {
+    color: #ff0000;
+}
+
 .navbar-toggler {
-color: #fafafa;
+color: #ff0000;
 font-size: 1.3rem;
 }
+
+
 /* Navbar CSS Ends */
 
 /* Home Page CSS Starts */
 .home-heroimage {
-    background: url("/static/images/home-heroimage-large.jpg");
-    height: 95vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-heroimage-large.jpg");
+    height: 90vh;
     max-width: 100%;
 
     background-position: center;
@@ -77,15 +84,54 @@ font-size: 1.3rem;
 
 }
 
-.heroimage-text {
-    font-family: 'Roboto', sans-serif;
-    color: #fafafa;
-    font-weight: 900;
-    font-size: 3rem;
+@media (max-width: 1024px) {  
+    .home-heroimage {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-heroimage-large.jpg");
+        height: 70vh;
+        max-width: 100%;
+    
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        
+        display: -webkit-box;
+        
+        display: -ms-flexbox;
+        
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    
+    }
 }
 
 .home-heroimage-text {
-    float: left;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.home-heroimage-text h2 {
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    font-size: 3rem;
+}
+
+.home-heroimage-text h1 {
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 /* Home Page CSS Ends */
 
