@@ -48,11 +48,25 @@ body {
 }
 
 .navbar-toggler {
-color: #ff0000;
-font-size: 1.3rem;
+    color: #ff0000;
+    font-size: 1.3rem;
 }
 
 /* Navbar CSS Ends */
+
+/* Footer CSS Starts */
+
+.social-link a i{
+    font-size: 2rem;
+    color: #fafafa;
+    margin-top: 2rem;
+}
+
+.social-link a i:hover {
+    color: #ce1b1b;
+}
+
+/* Footer CSS Ends */
 
 /* Home Page CSS Starts */
 .home-heroimage {
