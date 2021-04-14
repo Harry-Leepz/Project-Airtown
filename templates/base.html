@@ -16,37 +16,37 @@
 <!-- Navbar Section Starts -->
     <nav class="navbar navbar-expand-md">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Air Town</a>
+            <a class="navbar-brand heading-lobster" href="#">Air Town</a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fas fa-bars"></i></span>
             </button>
     
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse ml-auto" id="navbarNavDropdown">
     
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Jordan</a>
+                    <li class="nav-item ml-auto">
+                        <a class="nav-link heading-lobster ml-auto" href="#">Jordan</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nike</a>
+                    <li class="nav-item ml-auto">
+                        <a class="nav-link heading-lobster ml-auto" href="#">Nike</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('the_wall') }}">The Wall</a>
+                    <li class="nav-item ml-auto">
+                        <a class="nav-link heading-lobster ml-auto" href="{{ url_for('the_wall') }}">The Wall</a>
                     </li>
                     {% if session.user %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('account', username=session['user']) }}">Account</a>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link heading-lobster ml-auto" href="{{ url_for('account', username=session['user']) }}">Account</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('signout') }}">Sign Out</a>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link heading-lobster ml-auto" href="{{ url_for('signout') }}">Sign Out</a>
                         </li>
                     {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link heading-lobster ml-auto" href="{{ url_for('login') }}">Login</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for ('sign_up')}}">Sign Up</a>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link heading-lobster ml-auto" href="{{ url_for ('sign_up')}}">Sign Up</a>
                         </li>
                     {% endif %}
                 </ul>
