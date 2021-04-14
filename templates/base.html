@@ -26,27 +26,27 @@
     
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ml-auto">
-                        <a class="nav-link heading-lobster ml-auto" href="#">Jordan</a>
+                        <a class="nav-link ml-auto" href="#">Jordan</a>
                     </li>
                     <li class="nav-item ml-auto">
-                        <a class="nav-link heading-lobster ml-auto" href="#">Nike</a>
+                        <a class="nav-link ml-auto" href="#">Nike</a>
                     </li>
                     <li class="nav-item ml-auto">
-                        <a class="nav-link heading-lobster ml-auto" href="{{ url_for('the_wall') }}">The Wall</a>
+                        <a class="nav-link ml-auto" href="{{ url_for('the_wall') }}">The Wall</a>
                     </li>
                     {% if session.user %}
                         <li class="nav-item ml-auto">
-                            <a class="nav-link heading-lobster ml-auto" href="{{ url_for('account', username=session['user']) }}">Account</a>
+                            <a class="nav-link ml-auto" href="{{ url_for('account', username=session['user']) }}">Account</a>
                         </li>
                         <li class="nav-item ml-auto">
-                            <a class="nav-link heading-lobster ml-auto" href="{{ url_for('signout') }}">Sign Out</a>
+                            <a class="nav-link ml-auto" href="{{ url_for('signout') }}">Sign Out</a>
                         </li>
                     {% else %}
                         <li class="nav-item ml-auto">
-                            <a class="nav-link heading-lobster ml-auto" href="{{ url_for('login') }}">Login</a>
+                            <a class="nav-link ml-auto" href="{{ url_for('login') }}">Login</a>
                         </li>
                         <li class="nav-item ml-auto">
-                            <a class="nav-link heading-lobster ml-auto" href="{{ url_for ('sign_up')}}">Sign Up</a>
+                            <a class="nav-link ml-auto" href="{{ url_for ('sign_up')}}">Sign Up</a>
                         </li>
                     {% endif %}
                 </ul>

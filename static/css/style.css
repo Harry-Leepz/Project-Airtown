@@ -25,31 +25,32 @@ body {
 .navbar-brand {
     color: #fafafa;
     font-weight: 900;
-    font-size: 1.6rem;
-    letter-spacing: 4px;
+    font-size: 2rem;
+    letter-spacing: 1px;
     margin-left: 5px;
 }
 
 .nav-link {
+    font-family: 'Roboto', sans-serif;
     color: #fafafa;
     letter-spacing: 1px;
     font-weight: 700;
     margin-left: 10px;
+    text-transform: uppercase;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #ff0000;
+    color: #da1616;
 }
 
 .navbar-brand:hover {
-    color: #ff0000;
+    color: white;
 }
 
 .navbar-toggler {
 color: #ff0000;
 font-size: 1.3rem;
 }
-
 
 /* Navbar CSS Ends */
 
@@ -205,6 +206,30 @@ font-size: 1.3rem;
     font-size: 5rem;
 }
 
+.brand-heroimage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-brand.jpg");
+    height: 50vh;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
 /* Home Page CSS Ends */
 
 /* Page Heading CSS Starts */
