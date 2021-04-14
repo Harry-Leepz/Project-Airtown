@@ -111,6 +111,7 @@ font-size: 1.3rem;
 .heading-lobster {
     font-family: 'Lobster', cursive;
     text-shadow: 1px 1px 5px #FF0000;
+    color: white;
 }
 
 .home-heroimage-text {
@@ -119,11 +120,6 @@ font-size: 1.3rem;
     left: 15%;
 }
 
-.home-heroimage-text {
-    position: absolute;
-    top: 20%;
-    left: 15%;
-}
 
 @media (max-width: 472px) {
 .home-heroimage-text {
@@ -156,6 +152,25 @@ font-size: 1.3rem;
         color: white;
         font-size: 2rem;
     }
+}
+
+.heading {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.red-bar {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(213, 14, 14), rgb(0, 0, 0));
+    margin: 2rem;
+}
+
+.content {
+    color: #fafafa;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 /* Home Page CSS Ends */
 
