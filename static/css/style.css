@@ -86,7 +86,7 @@ font-size: 1.3rem;
 
 @media (max-width: 1024px) {  
     .home-heroimage {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-heroimage-large.jpg");
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-heroimage-small.jpg");
         height: 70vh;
         max-width: 100%;
     
@@ -112,26 +112,53 @@ font-size: 1.3rem;
     }
 }
 
+.heading-lobster {
+    font-family: 'Lobster', cursive;
+    text-shadow: 1px 1px 5px #FF0000;
+}
+
+.heading-roboto {
+    font-family: 'Lobster', cursive;
+    font-weight: 900;
+    text-shadow: 1px 1px 5px #FF0000;
+}
+
 .home-heroimage-text {
     position: absolute;
     top: 20%;
-    left: 20%;
+    left: 15%;
 }
 
-.home-heroimage-text h2 {
-    letter-spacing: 1px;
-    font-weight: 700;
-    color: white;
-    font-size: 3rem;
+.home-heroimage-text {
+    position: absolute;
+    top: 20%;
+    left: 15%;
 }
 
-.home-heroimage-text h1 {
-    letter-spacing: 1px;
-    font-weight: 700;
-    color: white;
-    font-size: 4rem;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+@media (max-width: 472px) {
+.home-heroimage-text {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .home-heroimage-text h2 {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: white;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 730px) {
+    .home-heroimage-text h2 {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: white;
+        font-size: 2rem;
+    }
 }
 /* Home Page CSS Ends */
 
