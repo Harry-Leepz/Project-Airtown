@@ -66,6 +66,10 @@ body {
     color: #ce1b1b;
 }
 
+.copyright-text {
+    color: #fafafa;
+}
+
 /* Footer CSS Ends */
 
 /* Home Page CSS Starts */
@@ -184,8 +188,7 @@ body {
 
 .content {
     color: #fafafa;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1rem;
 }
 
 .wall-heroimage {

@@ -21,7 +21,12 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home_page")
 def home_page():
-    return render_template("home.html", )
+    return render_template("home.html")
+
+
+@app.route("/jordan_page")
+def jordan_page():
+    return render_template("jordan.html")
 
 
 @app.route("/get_posts")
