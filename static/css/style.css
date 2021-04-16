@@ -311,7 +311,7 @@ body {
     border-radius: 2px;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    width: 40%;
+    width: 70%;
     }
 }
 @media (max-width: 1049px) {
@@ -322,7 +322,6 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 70%;
-    border: 2px solid rgb(153, 8, 8);
     }
 }
 
