@@ -21,12 +21,20 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home_page")
 def home_page():
+    # Render Home page as landing page
     return render_template("home.html")
 
 
 @app.route("/jordan_page")
 def jordan_page():
+    # Render Jordan brand page
     return render_template("jordan.html")
+
+
+@app.route("/nike_page")
+def nike_page():
+    # Render Nike brand page
+    return render_template("nike.html")
 
 
 @app.route("/get_posts")
