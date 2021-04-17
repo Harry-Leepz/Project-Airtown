@@ -4,6 +4,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -130,6 +131,8 @@ def new_post():
     if request.method == "POST":
         post = {
             "post_author": session["user"],
+            "post_date": datetime.datetime.utcnow().strftime(
+                '%d %B %Y - %H:%M:%S'),
             "post_title": request.form.get("post_title"),
             "category_name": request.form.get("category_name"),
             "post_content": request.form.get("post_content")
@@ -145,6 +148,8 @@ def edit_post(post_id):
     if request.method == "POST":
         submit = {
             "post_author": session["user"],
+            "post_date": datetime.datetime.utcnow().strftime(
+                '%d %B %Y - %H:%M:%S'),
             "post_title": request.form.get("post_title"),
             "category_name": request.form.get("category_name"),
             "post_content": request.form.get("post_content")
