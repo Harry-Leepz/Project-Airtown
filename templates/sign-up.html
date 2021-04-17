@@ -18,6 +18,7 @@
                             <input type="text" name="username" class="" id="username"
                                 placeholder="Enter Username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
                                 required>
+                            <p class="input-text"> Between 5-15 characters, Uppercase / Lowercase / Numbers Allowed</p>
                         </div>
                         <div class="form-group text-center">
                             <!-- First Name -->
@@ -27,22 +28,25 @@
                         </div>
                         <div class="form-group text-center">
                             <!-- Last Name -->
+                            <label class="label" for="lastname"><i class="fas fa-user-edit"></i></label>
                             <input type="text" name="lastname" class="input" pattern="^[a-zA-Z]{1,25}$"
                                 placeholder="Enter Last Name" required>
                         </div>
                         <div class="form-group text-center">
                             <!-- Password -->
+                            <label class="label" for="password"><i class="fas fa-lock"></i></label>
                             <input type="password" name="password" class="input" id="password"
                                 minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Enter Password"
                                 required>
+                            <p class="input-text"> Between 5-15 characters, Uppercase / Lowercase / Numbers Allowed</p>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-dark text-center">Sign Up</button>
+                            <button type="submit" class="btn btn-danger text-center">Sign Up</button>
                         </div>
                     </form>
                 </div>    
-                <p class="content heading text-center">
-                    Already have an account with Air Town ? <span><a href="{{ url_for('login') }}">Log In</a></span>
+                <p class="content text-center">
+                    Already have an account with Air Town ? <span class="text-lobster"><a href="{{ url_for('login') }}">Log In</a></span>
                 </p>
             </div>
         </div>

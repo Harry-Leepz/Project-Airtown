@@ -20,7 +20,7 @@ body {
 
 .navbar {
     padding: 0;
-    
+    background-color: rgba(4, 4, 4, 0.329);
 }
 
 .navbar-brand {
@@ -132,6 +132,13 @@ body {
     font-family: 'Lobster', cursive;
     text-shadow: 1px 1px 5px #FF0000;
     color: white;
+}
+
+.text-lobster a {
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 5px #FF0000;
+    color: white;
+    font-size: 1.2rem;
 }
 
 .home-heroimage-text {
@@ -411,15 +418,27 @@ body {
 }
 
 .form-group input {
-    width: 80%;
+    width: 50%;
     border: none;
     padding: 2px;
-    text-align: center;
+    color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-color: rgba(4, 4, 4, 0.761);
+    border-bottom: 3px solid white;
+}
+
+@media (max-width: 576px) {
+.form-group input {
+    width: 70%;
+    border: none;
+    padding: 2px;
     color: #fafafa;
     font-family: 'Roboto', sans-serif;
     font-size: 1.3rem;
     background-color: rgba(4, 4, 4, 0.761);
-    border-bottom: 2px solid red;
+    border-bottom: 3px solid white;
+    }
 }
 
 .label {
@@ -427,6 +446,19 @@ body {
     font-size: 1.5rem;
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
+
+input::placeholder {
+    color: #818181;
+    transition: color 0.3s ease;
+}
+
+.input-text {
+    color: white;
+    font-size: 10px;
+}
 /* Signup Page CSS Ends */
 
 /* The Wall Page CSS Starts */ 
