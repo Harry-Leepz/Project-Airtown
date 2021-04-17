@@ -224,6 +224,24 @@ body {
     font-size: 5rem;
 }
 
+@media (max-width: 768px) {
+    .heroimage-text h2 {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: white;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroimage-text h2 {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: white;
+        font-size: 2rem;
+    }
+}
+
 .brand-heroimage {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-brand.jpg");
     height: 50vh;
@@ -361,17 +379,52 @@ body {
 /* Signup Page CSS Starts */
 
 .signup-container {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/signup-heroimage.jpg");
+    height: 95vh;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
-@media (max-width: 575.98px) {
-    .signup-container {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        padding: 0;
-    }
+.form-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(4, 4, 4, 0.507);
+}
+
+.form-group input {
+    width: 80%;
+    border: none;
+    padding: 2px;
+    text-align: center;
+    color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    background-color: rgba(4, 4, 4, 0.761);
+    border-bottom: 2px solid red;
+}
+
+.label {
+    color: #fafafa;
+    font-size: 1.5rem;
 }
 
 /* Signup Page CSS Ends */
