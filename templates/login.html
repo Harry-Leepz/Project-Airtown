@@ -2,37 +2,48 @@
 
 {% block content %}
 <!-- Login Section Starts -->
-    <div class="page-heading text-center">
-        <h1>
-            Log into your Air Town account!
-        </h1>
-    </div>
+    
 
-    <div class="container-fluid signup-container">
+    <div class="container-fluid login-container">
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-12 col-md-8 col-lg-6 justify-content-center">    
-                <form method="POST" action="{{ url_for('login') }}">
-                    <div class="form-group">
-                        <!-- Username -->
-                        <input type="text" name="username" class="form-control form-control-lg" id="username" 
-                        placeholder="Enter Username" minlength="5" maxlength="15"
-                         pattern="^[a-zA-Z0-9]{5,15}$" required>
-                    </div>
-                    <div class="form-group">
-                        <!-- Password -->
-                        <input type="password" name="password" class="form-control form-control-lg" id="password"
-                        minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Enter Password" required>
-                    </div>
-                    <button type="submit" class="btn btn-dark text-center">Log In</button>
-                </form>
+            <div class="col-12 col-sm-12 col-md-8 col-lg-6 justify-content-center">
+                <div class="heroimage-text text-center">
+                    <h2 class="heading-lobster">
+                        Log into your Air Town account!
+                    </h2>
+                </div>
+                <div class="form-container">
+                    <form method="POST" action="{{ url_for('login') }}">
+                        <div class="form-group text-center">
+                            <!-- Username -->
+                            <label class="label" for="username"><i class="fas fa-users"></i></label>
+                            <input type="text" name="username" class="" id="username"
+                                placeholder="Enter Username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
+                                required>
+                            <p class="input-text"> Between 5-15 characters, Uppercase / Lowercase / Numbers Allowed</p>
+                        </div>
+                        <div class="form-group text-center">
+                            <!-- Password -->
+                            <label class="label" for="password"><i class="fas fa-lock"></i></label>
+                            <input type="password" name="password" class="" id="password"
+                                minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Enter Password"
+                                required>
+                            <p class="input-text"> Between 5-15 characters, Uppercase / Lowercase / Numbers Allowed</p>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-danger text-center">Log In</button>
+                        </div>    
+                    </form>
+                </div> 
+                <div class="content text-center">
+                    <p>
+                        Don't already have an account with Air Town ? <span class="text-lobster"><a href="{{ url_for('sign_up') }}">Sign Up</a></span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="page-content text-center">
-        <p>
-            Don't already have an account with Air Town ? <span><a href="{{ url_for('sign_up') }}">Sign Up</a></span>
-        </p>
-    </div>
+    
+    
 <!-- Login Section Ends -->
 {% endblock %}
