@@ -31,6 +31,8 @@ Returning User goals :
 
 ## Database Structure
 
+ [Link to Diagram of Database Structure](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/airtown-tables.pdf)
+
 ### Users
 ```
 {
