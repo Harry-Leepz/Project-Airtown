@@ -339,7 +339,8 @@ body {
 
 .content-image {
     height: auto;
-    width: 100%;
+    width: auto;
+    margin-bottom: 1rem;
 }
 
 /* Jordan Page CSS Ends */
