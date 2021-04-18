@@ -51,6 +51,7 @@ Returning User goals :
         "$oid": "60746f74dfc15759510dfa4f"
     },
     "post_author": "Username",
+    "post_date": "17 April 2021 - 21:20:17",
     "post_title": "Check me Out",
     "category_name": "Humble Brag",
     "post_content": "Hey, This is my test post!",
