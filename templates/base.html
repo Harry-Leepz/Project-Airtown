@@ -56,23 +56,25 @@
     </nav>
 <!-- Navbar Section Ends -->
 
-    {% block content %}
-
-    {% endblock %}
-
 <!-- Flash Message Section Starts -->
     <section>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                    <div class="flash-content">
-                        <h4 class="text-center">{{ message }}</h4>
+                    <div class="alert alert-light text-center" role="alert">
+                       <h4> {{ message }} </h4>
                     </div>
                 {% endfor %}
             {% endif %}
         {% endwith %}
     </section>
 <!-- Flash Message Section Ends -->
+
+<!-- Block Content Section Ends -->
+{% block content %}
+
+{% endblock %}
+<!-- Block Content Section Ends -->
 
 <!-- Footer Section Starts -->
     <footer>
@@ -112,7 +114,6 @@
             </div>
         </div>
     </footer>
-
 <!-- Footer Section Ends -->
 
 <!-- Script Tags Start -->

@@ -26,22 +26,26 @@ body {
 .navbar-brand {
     color: #fafafa;
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     margin-left: 5px;
 }
 
 .nav-link {
     font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
     color: #fafafa;
     letter-spacing: 1px;
-    font-weight: 700;
+    font-weight: 400;
     margin-left: 10px;
     text-transform: uppercase;
+    margin-right: 5px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #da1616;
+    text-decoration: underline;
+    color: white;
+    text-decoration-color: red;
 }
 
 .navbar-brand:hover {
@@ -54,6 +58,16 @@ body {
 }
 
 /* Navbar CSS Ends */
+
+/* Alert Flash Message CSS Starts */
+
+.alert-light {
+    color: #0e0e0e;
+    background-color: #fefefe8c;
+    border-color: #fdfdfe;
+}
+
+/* Alert Flash Message CSS Ends *?
 
 /* Footer CSS Starts */
 
