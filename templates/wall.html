@@ -36,12 +36,34 @@
     </div>
 </div>
 
-<!-- The Wall Post Section Starts -->
+<!-- The Wall Hero Image Starts -->
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-10 col-sm-12 col-lg-6 col-12">
+                <div class="heroimage-text text-center">
+                    <h2 class="heading-lobster">
+                        Welcome to The Wall
+                    </h2>
+                </div>
+                <div class="text-center">
+                    <h4 class="heading-lobster heading">
+                        Speak up. Believe in yourself. Take risks. Don't be afraid of being disliked or hated.
+                        <br>
+                        Learn to love the hate. Embrace it. Enjoy it. You earned it. Everyone is entitled to their own opinion and 
+                        everyone should have one about you. Haters are a good problem to have. Nobody hates the good ones. They hate the great ones.
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- The Wall Hero mage Ends -->
+
+<!-- The Wall Post Section Starts -->
+    <div class="container-fluid wall-container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-sm-12 col-lg-6 col-12">
                 {% if session.user %}
-                <button type="button " class="btn btn-warning" data-toggle="modal" data-target="#newPostModal">
+                <button type="button " class="btn btn-danger" data-toggle="modal" data-target="#newPostModal">
                     Create New Post
                 </button>
                 {% endif %}
@@ -49,28 +71,24 @@
                 <ul>
                     {% for post in posts %}
                         <li>
-                            <div class="card text-white bg-dark mt-1 mb-3">
-                                <div class="row card-header">
-                                    <div class="col-9">
-                                        <h5 class="card-title">
-                                            {{ post.post_title }} - {{ post.category_name }}
-                                        </h5>
-                                    </div>
-                                    <div class="col-3">
-                                        {% if session.user|lower == post.post_author|lower %}
-                                            <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post </a>      
-                                            <a href="{{ url_for('delete_post', post_id=post._id) }}" class="btn btn-danger text-right" >Delete Post</a>
-                                        {% endif %}
-                                    </div>
-                                </div>    
+                            <div class="card text-white mt-1 mb-1">
                                 <div class="card-body">
-                                    <p class="card-text">
+                                    <p class="card-author">
+                                        Posted by {{ post.post_author.capitalize() }} on {{ post.post_date }}
+                                    </p>  
+                                    <h5 class="card-title">
+                                            {{ post.post_title }} - {{ post.category_name }}
+                                    </h5>
+                                    <p class="card-content">
                                         {{ post.post_content }}
                                     </p>
-                                    <p class="card-author">
-                                       Posted by {{ post.post_author.capitalize() }} on {{ post.post_date }}
-                                    </p>
                                 </div>
+                                {% if session.user|lower == post.post_author|lower %}
+                                <div class="card-footer text-center">
+                                    <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post </a>
+                                    <a href="{{ url_for('delete_post', post_id=post._id) }}" class="btn btn-danger text-right">Delete Post</a>
+                                </div>
+                                {% endif %}
                             </div>
                         </li>   
                     {% endfor %}    

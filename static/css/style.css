@@ -515,9 +515,38 @@ input::placeholder {
 /*  Account Page CSS Ends */
 
 /* The Wall Page CSS Starts */ 
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
+.card-body {
+    padding: 5px;
+}
+
+.card {
+    background-color: #060606;
+    background-clip: border-box;
+    border: 1.5px solid rgba(228, 32, 32, 0.836);
+    border-radius: .35rem;
+}
+
+.card-author {
+    color: rgb(213, 213, 213);
+    font-size: .7rem;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.card-content {
+    font-size: .9rem;
+    font-weight: 100;
+    color: #cfcfcf;
+}
+
 /* The Wall Page CSS Ends */
