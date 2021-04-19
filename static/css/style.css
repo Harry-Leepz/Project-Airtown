@@ -505,6 +505,35 @@ input::placeholder {
 
 /* Login Page CSS Ends */
 
+/* Account Page CSS Starts */
+
+.account-heroimage {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/account-heroimage.jpg");
+    height: 95vh;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/*  Account Page CSS Ends */
+
 /* The Wall Page CSS Starts */ 
 ul {
     list-style-type: none;

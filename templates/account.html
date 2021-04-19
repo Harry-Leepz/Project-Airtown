@@ -5,17 +5,57 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-sm-12 col-md-10 col-lg-8">
-                <div class="page-heading text-center">
-                    <h1>
+                <div class="heroimage-text text-center">
+                    <h2 class="heading-lobster">
                         {{ username.capitalize() }}'s Account
-                    </h1>
-                    <p>
-                        
-                    </p>
+                    </h2>
                 </div>
+                <div class="text-center">
+                    <h4 class="heading-lobster heading">
+                        Below are a list of you posts made on The Wall 
+                    </h4>
+                </div>
+                <!-- Posts Starts -->
+                <ul>
+                    {% for post in posts %}
+                        {% if session.user|lower == post.post_author|lower %}
+                            <li>
+                                <div class="card text-white bg-dark mt-1 mb-3">
+                                    <div class="row card-header">
+                                        <div class="col-9">
+                                            <h5 class="card-title">
+                                                {{ post.post_title }} - {{ post.category_name }}
+                                            </h5>
+                                        </div>
+                                        <div class="col-3">
+                                            {% if session.user|lower == post.post_author|lower %}
+                                            <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit
+                                                Post </a>
+                                            <a href="{{ url_for('delete_post', post_id=post._id) }}" class="btn btn-danger text-right">Delete
+                                                Post</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            {{ post.post_content }}
+                                        </p>
+                                        <p class="card-author">
+                                            Posted by {{ post.post_author.capitalize() }} on {{ post.post_date }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <!-- Posts Ends -->
+                    
             </div>
         </div>
     </div>
-    
+
+
+                
 <!-- User Account Section Ends -->
 {% endblock %}

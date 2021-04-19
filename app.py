@@ -105,7 +105,8 @@ def account(username):
     # Obtaining the session user from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("account.html", username=username)
+    posts = list(mongo.db.posts.find())
+    return render_template("account.html", posts=posts, username=username)
 
 
 @app.route("/logout")
