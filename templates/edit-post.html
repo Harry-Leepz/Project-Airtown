@@ -1,16 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container-fluid">
+<!-- Edit Post Section Starts -->
+    <div class="container-fluid editpost-container">
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-12 col-md-10 col-lg-6">
-                <div class="form container">
-                    <h1> Editing your post huh !?</h1>
-                    <form class="form-horizontal" method="POST" action="{{ url_for('edit_post', post_id=post._id) }}">
+            <div class="col-12 justify-content-center">
+                <div class="heroimage-text text-center">
+                    <h2 class="heading-lobster">
+                        Log into your Air Town account!
+                    </h2>
+                </div>
+                <div class="form container text-center">    
+                    <form method="POST" action="{{ url_for('edit_post', post_id=post._id) }}">
+                        <div class="form-group text-center">
                         <!-- Post Title-->
-                        <div class="form-group">
+                            <label class="label" for="username"><i class="fas fa-heading"></i></label>
                             <input class="form-control" maxlength="50" minlength="5" id="post_title" name="post_title"
                             type="text" placeholder="Give your post a title!" value="{{ post.post_title }}" required>
+                            <p class="input-text"> Between 5-15 characters</p>
                         </div>
                         <!-- Post Category Selection-->
                         <select id="category_name" name="category_name" class="form-control mb-3"
@@ -41,4 +48,5 @@
             </div>
         </div>
     </div>
+<!-- Edit Post Section Ends -->
 {% endblock %}
