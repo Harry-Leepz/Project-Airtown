@@ -34,6 +34,7 @@
                                     {% endif %}
                                 {% endfor %}
                             </select>
+                            <p class="input-text">Please select an option relevant to the post</p>
                         </div>
                         <!-- Post Content-->
                         <div class="form-group">
@@ -41,6 +42,7 @@
                                 name="post_content" type="text" placeholder="Your thoughts!" required>
                             {{- post.post_content -}}
                             </textarea>
+                            <p class="input-text"> Between 5-500 characters</p>
                         </div>
                         <a href="{{ url_for('the_wall')}}" class="btn btn-light"> Cancel changes!</a>
                         <button type="submit" class="btn btn-danger">Edit Post!</button>

@@ -587,4 +587,15 @@ ul {
     background-color: rgba(4, 4, 4, 0.761);
     border-bottom: 3px solid white;
 }
+
+.form-control:focus {
+    border: none;
+    padding: 2px;
+    color: #fafafa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background-color: rgba(4, 4, 4, 0.761);
+    border-bottom: 3px solid white;
+}
+
 /* Edit Post Page CSS Ends */
