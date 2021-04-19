@@ -119,9 +119,9 @@ def signout():
 
 @app.route("/the_wall")
 def the_wall():
-    # Obtaining the posts collection from the database
+    # Obtaining the posts collection from the database and sorting by date
     # Obtaining the categories collection from the data and sorting
-    posts = list(mongo.db.posts.find())
+    posts = list(mongo.db.posts.find().sort("post_date", -1))
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("wall.html", posts=posts, categories=categories)
 
