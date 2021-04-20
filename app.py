@@ -141,6 +141,9 @@ def new_post():
         mongo.db.posts.insert_one(post)
         flash("Sucessfully posted on The Wall")
         return redirect(url_for("the_wall"))
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template(
+        "create-post.html", categories=categories)
 
 
 @app.route("/edit_post/<post_id>", methods=["GET", "POST"])

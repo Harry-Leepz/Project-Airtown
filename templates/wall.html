@@ -2,40 +2,6 @@
 
 {% block content %}
 
-<!-- Modal for New Post -->
-<div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5>
-                    What's on your mind ?
-                </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form method="POST" id="newPost" action="{{ url_for('new_post') }}">
-                    <div class="form-group">
-                        <input class="form-control form-control-sm" maxlength="50" minlength="5" 
-                        id="post_title" name="post_title" type="text" placeholder="Give your post a title!" required>
-                        <select id="category_name" name="category_name" class="form-control form-control-sm" aria-placeholder="Choose a post type" required>
-                            {% for category in categories %}
-                                <option>
-                                    {{ category.category_name }}
-                                </option>
-                            {% endfor %}
-                        </select>
-                        <textarea rows="3" class="form-control form-control-sm" minlength="5" maxlength="500" 
-                        id="post_content" name="post_content" type="text" placeholder="Your thoughts!" required></textarea>
-                    </div>
-                    <button type="submit" onclick="submitPost" class="btn btn-success">Post</button>   
-                </form>
-            </div>                
-        </div>
-    </div>
-</div>
-
 <!-- The Wall Hero Image Starts -->
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -63,9 +29,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-sm-12 col-lg-6 col-12">
                 {% if session.user %}
-                <button type="button " class="btn btn-danger" data-toggle="modal" data-target="#newPostModal">
-                    Create New Post
-                </button>
+                    <a href="{{ url_for('new_post') }}" class="btn btn-danger text-right">Create New Post</a>
                 {% endif %}
                 <!-- Posts Starts -->
                 <ul>
