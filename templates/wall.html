@@ -12,7 +12,7 @@
                     </h2>
                 </div>
                 <div class="text-center">
-                    <h4 class="heading-lobster heading">
+                    <h4 class="page-heading heading">
                         Speak up. Believe in yourself. Take risks. Don't be afraid of being disliked or hated.
                         <br>
                         Learn to love the hate. Embrace it. Enjoy it. You earned it. Everyone is entitled to their own opinion and 
@@ -28,13 +28,14 @@
         <div class="row justify-content-center">
             <div class="col-12 col-sm-12 col-md-8 col-lg-6">
                 <form method="POST" action="{{ url_for('search') }}">
-                    <div class="form-group text-center">
-                        <!-- Username -->
-                        <label class="label" for="query"><i class="fas fa-search"></i></label>
-                        <input type="text" name="query" class="validate" id="query" placeholder="Search via Category or Post Title" minlength="3" required>
-                        <a href="{{ url_for('the_wall') }}" class="btn btn-danger"> Reset </a>
-                        <button type="submit" class="btn btn-light"> Search </button>
+                    <div class="text-center">
+                        <!-- Search -->
+                        <input type="text" name="query" class="validate search-input" id="query" placeholder="Search via Category or Post Title" minlength="3" required>
                     </div>
+                    <div class=" button-container text-center">
+                        <a href="{{ url_for('the_wall') }}" class="btn btn-danger mb-1 mt-1"> Reset </a>
+                        <button type="submit" class="btn btn-light mb-1 mt-1"> Search </button>
+                    </div>  
                 </form>
             </div>
         </div>
