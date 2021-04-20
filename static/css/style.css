@@ -24,11 +24,13 @@ body {
 }
 
 .navbar-brand {
-    color: #fafafa;
     font-weight: 900;
     font-size: 1.5rem;
     letter-spacing: 1px;
     margin-left: 5px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 1px 1px 5px #FF0000;
+    color: white;
 }
 
 .nav-link {
@@ -625,3 +627,16 @@ ul {
 }
 
 /* Edit Post Page CSS Ends */
+
+/* JS Animation Starts */
+
+span {
+    color: rgba(0, 0, 0, 0.158);
+    transition: all 0.2s ease;
+}
+
+span.red-animation {
+   color: rgb(255, 255, 255);
+}
+
+/* JS Animation Ends */
