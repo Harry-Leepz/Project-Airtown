@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<!-- The Wall Hero Image Starts -->
+<!-- The Wall Heading Starts -->
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-10 col-sm-12 col-lg-6 col-12">
@@ -22,7 +22,16 @@
             </div>
         </div>
     </div>
-<!-- The Wall Hero mage Ends -->
+
+<!-- The Wall Search Starts -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+
+            </div>
+        </div>
+    </div>
+
 
 <!-- The Wall Post Section Starts -->
     <div class="container-fluid wall-container">
@@ -59,12 +68,9 @@
                         </li>   
                     {% endfor %}    
                 </ul>
-            <!-- Posts Ends -->
             </div>
         </div>
     </div>
-
-
 
 {% for post in posts %}
     {% if session.user|lower == post.post_author|lower %}
@@ -90,5 +96,5 @@
 </div>      
     {% endif %}
 {% endfor %}
-<!-- The Wall Post Section Ends -->
+
 {% endblock %}

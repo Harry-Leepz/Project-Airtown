@@ -631,12 +631,12 @@ ul {
 /* JS Animation Starts */
 
 span {
-    color: rgba(0, 0, 0, 0.158);
+    text-shadow: 1px 1px 5px #FF0000;
     transition: all 0.2s ease;
 }
 
 span.red-animation {
-   color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px #373737;
 }
 
 /* JS Animation Ends */

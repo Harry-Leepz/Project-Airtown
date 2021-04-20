@@ -57,27 +57,23 @@
 <!-- Navbar Section Ends -->
 
 <!-- Flash Message Section Starts -->
-    <section>
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-light text-center alert-dismissible fade show" role="alert">
-                        <h4> {{ message }} </h4>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    </section>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-light text-center alert-dismissible fade show" role="alert">
+                <h4> {{ message }} </h4>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
 <!-- Flash Message Section Ends -->
 
-<!-- Block Content Section Ends -->
 {% block content %}
 
 {% endblock %}
-<!-- Block Content Section Ends -->
 
 <!-- Footer Section Starts -->
     <footer>
@@ -124,9 +120,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="{{ url_for ('static', filename='js/script.js')}}"></script>
-{% block scripts %}
-
-{% endblock %}
-<!-- Script Tags End -->
 </body>
 </html>
