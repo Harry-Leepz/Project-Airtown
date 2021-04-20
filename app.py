@@ -127,6 +127,13 @@ def the_wall():
         "wall.html", posts=posts, categories=categories)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    posts = list(mongo.db.posts.find({"$text": {"$search": query}}))
+    return render_template("wall.html", posts=posts)
+
+
 @app.route("/new_post", methods=["GET", "POST"])
 def new_post():
     # Inserting a new post into the database

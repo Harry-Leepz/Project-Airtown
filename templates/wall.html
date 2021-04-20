@@ -27,7 +27,15 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-sm-12 col-md-8 col-lg-6">
-
+                <form method="POST" action="{{ url_for('search') }}">
+                    <div class="form-group text-center">
+                        <!-- Username -->
+                        <label class="label" for="query"><i class="fas fa-search"></i></label>
+                        <input type="text" name="query" class="validate" id="query" placeholder="Search via Category or Post Title" minlength="3" required>
+                        <a href="{{ url_for('the_wall') }}" class="btn btn-danger"> Reset </a>
+                        <button type="submit" class="btn btn-light"> Search </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -74,26 +82,26 @@
 
 {% for post in posts %}
     {% if session.user|lower == post.post_author|lower %}
-<!-- Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+        <!-- Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you wish to delete you post ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="{{ url_for('delete_post', post_id=post._id) }}" class="btn btn-danger text-right">Delete Post</a>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                Are you sure you wish to delete you post ?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="{{ url_for('delete_post', post_id=post._id) }}" class="btn btn-danger text-right">Delete Post</a>
-            </div>
-        </div>
-    </div>
-</div>      
+        </div>      
     {% endif %}
 {% endfor %}
 
