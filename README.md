@@ -88,12 +88,48 @@ Phase 1 will act as the project's minimal viable product, offering users simple 
 
 Phase 2 will build further on the project adding features that will further provide user functionality and improve the user experience.
 
+---
 
-## Database Structure
+## **The Structure Plane**
+
+*Images*
+
+Consistent imagery throughout the project, not only to help condense the text but to also give the user something to view and feel as though they can take a breath. Images should be relatable to the content on the page and not feel forced or out of place.
+
+*Colors*
+
+Predominately throughout the project, a large amount of emphasis was made on focusing on three colors. 
+- Red
+- Black 
+- White
+
+All images used throughout the project also have a black gradient overlay to help the text stand out more. 
+White color was used for the text, against the black background the text is easily readable. 
+
+The red color was used to provide an additional layer of contrast across the project and to avoid the project looking monotonous. Hero Image text has a slight red shadow animating across on load. On the wall page, a red border is added around the post containers, also most of the important submit buttons are red using the Bootstrap btn-danger class.
+
+A large part of the inspiration behind the color choice is also mainly due to them being the same colors for Michael Jordan's first sneaker.
+
+Overall the colors give the project a dark feel, from the landing page the user learns about sneakers and brands. Representing the "Air" in air town. 
+As the user progresses into the account creation and login section they experience the "Town" in air town, with images of cities to give the aesthetic "Air Town" is a real place. 
+
+*Typography*
+
+Fonts used for this project, 
+- Roboto
+- Lobster 
+
+The Lobster font is exclusively used for hero image text overlay and as the brand text in the navbar acting as a link back to the home page.
+
+The Roboto font is used as the main font for the text across the project, Roboto is used at different font weights to give the smaller content headings more emphasis, while the general content text is at lower font size and weight while still being readable across all resolutions.
+
+The text will be consistent on all pages with a centered title, small centered summary, and finally the content of the page aligned to the left except on the landing page where sentences are small and centred.
+
+**Database Structure**
 
  [Link to Diagram of Database Structure](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/airtown-tables.pdf)
 
-### Users
+*Users*
 ```
 {
     "_id": {
@@ -106,7 +142,7 @@ Phase 2 will build further on the project adding features that will further prov
 }
 ```
 
-### Posts
+*Posts*
 ```
 {
     "_id": {
@@ -121,7 +157,7 @@ Phase 2 will build further on the project adding features that will further prov
 }
 ```
 
-### Post Categories
+*Post Categories*
 ```
 {
     "_id": {
@@ -142,3 +178,19 @@ Phase 2 will build further on the project adding features that will further prov
     "category_name": "Honest Opinion"
 }
 ```
+
+As shown above, the database structure is separated into 3 collections, 
+- Users
+- Posts
+- Post Categories
+
+Users sign up with a username, first name, last name, and password of their choice. 
+
+Posts take the username value as the author of the post, date and time are added as methods to sort posts in order, newest to oldest. Posts have titles and content. The category name is used to help differentiate the posts on the type of content they contain.  
+
+Post Categories are separated into 3 documents, 
+- Humble Brag - User chooses to humbly brag potentially about their latest purchase or perhaps their latest style trend.
+- Simple Review - User chooses to review a sneaker they have currently purchased.
+- Honest Opinion - Users can use this option to talk about anything really, user can freely express themselves on the latest fashion trends, upcoming releases, or news. 
+
+In addition an index is used in MongoDB to query the posts collection. Post title and category name are used to query the posts collection for matching text. This is put into functional use on the wall page, where there is a inpyt field for users to search posts.
