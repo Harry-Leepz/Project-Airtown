@@ -1,5 +1,7 @@
 # **Air Town**
 
+![Project Image](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/welcome-image.png)
+
 ## **Introduction**
 
 Welcome to my third project, part of the Code Institute Full Stack Development Course.
@@ -194,3 +196,40 @@ Post Categories are separated into 3 documents,
 - Honest Opinion - Users can use this option to talk about anything really, user can freely express themselves on the latest fashion trends, upcoming releases, or news. 
 
 In addition an index is used in MongoDB to query the posts collection. Post title and category name are used to query the posts collection for matching text. This is put into functional use on the wall page, where there is a inpyt field for users to search posts.
+
+---
+
+## **The Skeleton Plane**
+
+A link to the project wireframes can be found below. Wireframes were designed before development began and changes from the initial conceptual design are detailed below the wireframes.
+
+[Link to Air Town Wireframes](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/air-town-wireframes.pdf)
+
+**Changes from Wireframes**
+
+*Home Page*
+- Additional hero image was added and used to introduce the user to the pages for the brands. 
+- Section relating the rest of the site is replaced by the brand section. 
+- Smaller heading are added to introduce sections aswell as hero image text. 
+
+*The Wall Page*
+- Main heading and a smaller heading are added at the top of the page to act as an introductiong for the user. 
+- Search input has 2 buttons added below to search or reset. 
+- Post username and date are now combined into a single line as 
+*"user posted on  date and time"*
+- User profile picture was not added, image uploads are instead pushed for phase 2 implementation. 
+- Above the post content, a post title and user category selection are added to give the user a heading for type of post. 
+
+*Jordan and Nike Pages*
+- Hero Image has heading text as overlay.
+- Content related images are floated to the right with text wrapped around the image.
+
+*Creating a Post Page*
+- Category selection was added under post title to help used better describe the type of post.
+
+The decision to make changes from the conceptual design generally came down to user feedback during development, or personal decisions based on how the page looked aesthetically. 
+
+---
+
+## **The Surface Plane**    
+
