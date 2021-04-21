@@ -25,12 +25,12 @@ body {
 
 .navbar-brand {
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     letter-spacing: 1px;
     margin-left: 5px;
     font-family: 'Lobster', cursive;
-    text-shadow: 1px 1px 5px #FF0000;
     color: white;
+    padding: 0;
 }
 
 .nav-link {
@@ -81,7 +81,7 @@ body {
 }
 
 .social-link a i:hover {
-    color: #ce1b1b;
+    color: #ff0000;
 }
 
 .copyright-text {
@@ -91,6 +91,7 @@ body {
 /* Footer CSS Ends */
 
 /* Home Page CSS Starts */
+
 .home-heroimage {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-heroimage-large.jpg");
     height: 90vh;
@@ -241,31 +242,6 @@ body {
             justify-content: center;
 }
 
-.heroimage-text h2 {
-    letter-spacing: 1px;
-    font-weight: 700;
-    color: white;
-    font-size: 5rem;
-}
-
-@media (max-width: 768px) {
-    .heroimage-text h2 {
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: white;
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .heroimage-text h2 {
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: white;
-        font-size: 2rem;
-    }
-}
-
 .brand-heroimage {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-brand.jpg");
     height: 50vh;
@@ -393,6 +369,31 @@ body {
 
 /* Page Heading CSS Starts */
 
+.heroimage-text h2 {
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    font-size: 5rem;
+}
+
+@media (max-width: 768px) {
+    .heroimage-text h2 {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: white;
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroimage-text h2 {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: white;
+        font-size: 2.5rem;
+    }
+}
+
 .page-heading {
     margin-top: 3rem;
     font-family: 'Roboto', sans-serif;
@@ -489,6 +490,7 @@ input::placeholder {
     color: white;
     font-size: 10px;
 }
+
 /* Signup Page CSS Ends */
 
 /* Login Page CSS Starts */
@@ -578,6 +580,7 @@ ul {
 .button-container {
     margin-bottom: 2rem;
 }
+
 /* The Wall Page CSS Ends */
 
 .newpost-container {
@@ -658,12 +661,12 @@ ul {
 /* JS Animation Starts */
 
 span {
-    text-shadow: 1px 1px 5px #FF0000;
-    transition: all 0.2s ease;
+    text-shadow: 1px 1px 5px #000000a6;
+    transition: all 0.5s ease;
 }
 
 span.red-animation {
-    text-shadow: 1px 1px 2px #d5d5d5;
+    text-shadow: 1px 1px 2px #ff0000;
 }
 
 /* JS Animation Ends */
