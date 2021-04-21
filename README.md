@@ -38,24 +38,55 @@ The Stratergy Plane consists of doing reasearch to understand the use for the pr
 
 ### **User Stories and Creator Goals**
 
-First-time User goals :
+*First-time User goals :*
 
 - As a first time user, I would like some introduction to the project on the home page.
 - As a first time user, I would like to see some content related to the topic of the project.
 - As a first time user, I would like to see a contrast between images/text/color to make pages more appealing.
 
-Returning User goals :
+*Returning User goals :*
+
 - As a returning user, I would like to be able to sign up and create an account on the website.
 - As a returning user, I would like to share my posts and view other posts.
 - As a returning user, I would like to be able to edit my posts, to correct any errors or amend the posts to my liking.
 - As a returning user, I would like to be able to delete my posts, ideally with some form of confirmation to protect me from missclicks.
 - As a returning user, I would like to be able to search posts, and filter for those that I want.
 
-Creator Goals :
+*Creator Goals :*
 
 - As a Creator, I want fans of sneakers to have a platform to share their love for sneakers.
 - As a creator, I want to give people an insight into the sneaker culture and the brands.
-- As a Creator, I want to use images to help bring the project to life. 
+- As a Creator, I want to use images to help bring the project to life.
+
+User Goals were generated from the research of some forums sites and talking with friends to understand what they would like from the project.
+
+---
+
+## **The Scope Plane**
+
+Often when planning and developing a project, it can be easy to get ahead of ourselves with all the features we would like to implement. 
+
+This hurdle for me during development was my lack of knowledge working with Python and Flask. I tried to focus the development of the project into two separate phases. 
+
+*Phase 1*
+
+- Landing page with a project introduction, and short introduction to the other sections of the project.
+- A couple of pages relating to the popular sneaker brands.
+- Forum page allowing users to view posts, search for posts, signed in users can edit and delete posts made by them. 
+- Sign up page for users to create an account, Sign out page for users to be able to sign out after a session. 
+- Account page will allow users to be bale to view their posts, users should be allowed to edit and delete their posts from the account page. 
+- Posts will have the Username and a date/time at the top, allowing posts to be sorted by the lastest post at the top. 
+
+*Phase 2*
+
+- Additional interactive features to help pages feel less static. 
+- Users will be allowed to upload images to their posts, with files directly from their computer. 
+- Account page will have options for users to be able to change their username and password.
+- Pagination so that the posts on the page are limited. 
+
+Phase 1 will act as the project's minimal viable product, offering users simple CRUD functions. While still meeting the goals for first-time and regular users. 
+
+Phase 2 will build further on the project adding features that will further provide user functionality and improve the user experience.
 
 
 ## Database Structure
