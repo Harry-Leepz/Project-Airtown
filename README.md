@@ -233,3 +233,92 @@ The decision to make changes from the conceptual design generally came down to u
 
 ## **The Surface Plane**    
 
+*Features present across the project*,
+- Navbar is responsive across all resolutions, Bootstrap navbar used to toggle links in a hamburger menu at 767px. Main logo on the right with the navbar-brand class acts as a link to the home page. 
+- Footer section has social media icons with red color hover effect, all social media links open in a new tab.
+- Consistant hero images used throughout the project, hero images have a dark overlay to help the text stand out. Images used throughout the project are consistant with project theme.
+- Dark background and dark theme throughout the project, helps user with reduced eyestrain. 
+- contrast of fonts and font weights between header and proceeding text. Helps the pages as a whole look less monotonous.
+- Content for brand pages is taken from official brand source for uptodate and accurate reflection. 
+- Flash text provides users with constant feedback throughout the project. 
+- Users are able to create an account and use the additional benefits to create posts. Users are then able to gain access to the account page where they can view their posts, edit and delete. 
+- Search functionality is added on the wall page, allowing users to be able to search for posts either via title or category. 
+- All user input forms are coded with defensive programming in mind, providing user feedback for incorrect field inputs. 
+- Custom error pages giving user feedback on any issues related to pages that may not be accessible and link to take them back home. 
+
+*Features left to implement across the project*,
+- Further interactive elements to help the pages look less static. 
+- Customize the user account page, allowing users to select a profile picture and allowing them to change their account details.
+- Allow users to include pictures with their posts, users will be allowed to select directly from the device files.
+- Pagination on the wall page and account page to avoid pages feeling flooded, users will have a select amount of posts shown on their page with the option to move onto the next selection with the click of a button.
+
+---
+
+## **Technologies Used** ##
+
+- [Python](https://www.python.org/)
+    - The core main language used on the project, all functionality to run and view this project was built with Python.
+    - The following Python modules were used on this project, 
+        - click==7.1.2
+        - DateTime==4.3
+        - dnspython==2.1.0
+        - Flask==1.1.2
+        - Flask-PyMongo==2.3.0
+        - itsdangerous==1.1.0
+        - pymongo==3.11.3
+        - pytz==2021.1
+        - Werkzeug==1.0.1
+        - zope.interface==5.4.0
+
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+    - Used as the templating language with Python.
+
+- [Heroku](https://www.heroku.com/)
+    - Used as the deployment source for this project.
+
+- [MongoDB](https://www.mongodb.com/2)
+    - Used as document based datebase for this project.
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+    - Used as the basic building block for the project and to structure the content.
+
+- [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics)
+    - Used to style all the web content across the project. 
+
+- [Bootstrap](https://getbootstrap.com/)
+    - Used as the main framework to make the project responsive.
+
+- [jQuery](https://jquery.com/)
+    - Used with Bootstrap to make the navbar responsive.
+
+- [JavaScript](https://www.javascript.com/)
+    - Used for the bootstrap navbar for extending collapse plugin to implement responsive behavior, Text shadow animation added on hero image text to add a subtle red text shadow when pages load.
+
+- [Google Fonts](https://fonts.google.com/)
+    - Used to obtain the fonts linked in the header, fonts used were Roboto and Dancing Script
+
+- [Font Awesome](https://fontawesome.com/)
+    - Used to obtain the social media icons used in the footer.
+
+- [Google Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - Used as a primary method of fixing spacing issues, finding bugs, and testing responsiveness across the project.
+
+- [Github](https://github.com/)
+    - Used to store code for the project after being pushed.
+
+- [Git](https://git-scm.com/)
+    - Used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+- [Gitpod](https://www.gitpod.io/)
+    - Used as the development enviroment.
+
+- [Balsamiq](https://balsamiq.com/)
+    - Used to create the wireframes for the project.
+
+- [AutoPrefixer](https://autoprefixer.github.io/)
+    - Used to parse my CSS and ass vendor prefixes.
+
+- [Grammarly](https://www.grammarly.com/)
+    - Used to fix the thousands of grammar errors across the project.
+ 
+---
