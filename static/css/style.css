@@ -1,62 +1,70 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 body {
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    background-color: black;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
 .row {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .container-fluid {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /* Navbar CSS Starts */
 
 .navbar {
-    padding: 0;
-    background-color: rgba(4, 4, 4, 0.329);
+  padding: 0;
+  background-color: rgba(4, 4, 4, 0.329);
 }
 
 .navbar-brand {
-    font-weight: 900;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    margin-left: 5px;
-    font-family: 'Lobster', cursive;
-    color: white;
-    padding: 0;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  margin-left: 5px;
+  font-family: "Lobster", cursive;
+  color: white;
+  padding: 0;
 }
 
 .nav-link {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #fafafa;
-    letter-spacing: 1px;
-    font-weight: 700;
-    margin-left: 10px;
-    text-transform: uppercase;
-    margin-right: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #fafafa;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-left: 10px;
+  text-transform: uppercase;
+  margin-right: 5px;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    text-decoration: underline;
-    color: white;
-    text-decoration-color: red;
+  text-decoration: underline;
+  color: white;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
 }
 
 .navbar-brand:hover {
-    color: white;
+  color: white;
 }
 
 .navbar-toggler {
-    color: #ff0000;
-    font-size: 1.3rem;
+  color: #ff0000;
+  font-size: 1.3rem;
 }
 
 /* Navbar CSS Ends */
@@ -64,27 +72,27 @@ body {
 /* Alert Flash Message CSS Starts */
 
 .alert-light {
-    color: #0e0e0e;
-    background-color: #fefefe8c;
-    border-color: #fdfdfe;
+  color: #0e0e0e;
+  background-color: #fefefe8c;
+  border-color: #fdfdfe;
 }
 
 /* Alert Flash Message CSS Ends *?
 
 /* Footer CSS Starts */
 
-.social-link a i{
-    font-size: 2rem;
-    color: #fafafa;
-    margin-top: 2rem;
+.social-link a i {
+  font-size: 2rem;
+  color: #fafafa;
+  margin-top: 2rem;
 }
 
 .social-link a i:hover {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 .copyright-text {
-    color: #fafafa;
+  color: #fafafa;
 }
 
 /* Footer CSS Ends */
@@ -92,184 +100,221 @@ body {
 /* Home Page CSS Starts */
 
 .home-heroimage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-heroimage-large.jpg");
-    height: 90vh;
-    max-width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/home-heroimage-large.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/home-heroimage-large.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/home-heroimage-large.jpg");
+  height: 90vh;
+  max-width: 100%;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 
-}
+  display: -webkit-box;
 
-@media (max-width: 1024px) {  
-    .home-heroimage {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-heroimage-small.jpg");
-        height: 70vh;
-        max-width: 100%;
-    
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        
-        display: -webkit-box;
-        
-        display: -ms-flexbox;
-        
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
-}
+  display: -ms-flexbox;
 
-.heading-lobster {
-    font-family: 'Lobster', cursive;
-    text-shadow: 1px 1px 5px #FF0000;
-    color: white;
-}
-
-.link-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    color: white;
-    font-size: 1.3rem;
-}
-
-.link-text:hover {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    color: white;
-    font-size: 1.3rem;
-    text-decoration: underline;
-    text-decoration-color: red;
-}
-
-.home-heroimage-text {  
-    position: absolute;
-    top: 20%;
-    left: 15%;
-}
-
-
-@media (max-width: 472px) {
-.home-heroimage-text {
-    position: absolute;
-    top: 20%;
-    left: 2%;
-    }
-}
-
-.home-heroimage-text h2 {
-    letter-spacing: 1px;
-    font-weight: 700;
-    color: white;
-    font-size: 5rem;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media (max-width: 1024px) {
-    .home-heroimage-text h2 {
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: white;
-        font-size: 3rem;
-    }
+  .home-heroimage {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+      url("/static/images/home-heroimage-small.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/static/images/home-heroimage-small.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/static/images/home-heroimage-small.jpg");
+    height: 70vh;
+    max-width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.heading-lobster {
+  font-family: "Lobster", cursive;
+  text-shadow: 1px 1px 5px #ff0000;
+  color: white;
+}
+
+.link-text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.link-text:hover {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
+}
+
+.home-heroimage-text {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+@media (max-width: 472px) {
+  .home-heroimage-text {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+  }
+}
+
+.home-heroimage-text h2 {
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: white;
+  font-size: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .home-heroimage-text h2 {
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 730px) {
-    .home-heroimage-text h2 {
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: white;
-        font-size: 2rem;
-    }
+  .home-heroimage-text h2 {
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    font-size: 2rem;
+  }
 }
 
 .heading {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .red-bar {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(213, 14, 14), rgb(0, 0, 0));
-    margin: 2rem;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-gradient(
+    linear,
+    left top, right top,
+    from(rgb(0, 0, 0)),
+    color-stop(rgb(213, 14, 14)),
+    to(rgb(0, 0, 0))
+  );
+  background-image: -o-linear-gradient(
+    left,
+    rgb(0, 0, 0),
+    rgb(213, 14, 14),
+    rgb(0, 0, 0)
+  );
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgb(213, 14, 14),
+    rgb(0, 0, 0)
+  );
+  margin: 2rem;
 }
 
 .content {
-    color: #fafafa;
-    font-size: 1rem;
+  color: #fafafa;
+  font-size: 1rem;
 }
 
 .wall-heroimage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-thewall2.jpg");
-    height: 50vh;
-    max-width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/home-thewall2.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/home-thewall2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/home-thewall2.jpg");
+  height: 50vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .brand-heroimage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/home-brand.jpg");
-    height: 50vh;
-    max-width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/home-brand.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/home-brand.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/home-brand.jpg");
+  height: 50vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* Home Page CSS Ends */
@@ -277,7 +322,42 @@ body {
 /* Jordan Page CSS Starts */
 
 .jordan-heroimage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/jordan-heroimage.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/jordan-heroimage.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/jordan-heroimage.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/jordan-heroimage.jpg");
+  height: 50vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .jordan-heroimage {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+      url("/static/images/jordan-heroimage.jpg");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/static/images/jordan-heroimage.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/static/images/jordan-heroimage.jpg");
     height: 50vh;
     max-width: 100%;
     background-position: center;
@@ -286,56 +366,32 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-}
 
-@media (max-width: 1024px) {
-    .jordan-heroimage {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/jordan-heroimage.jpg");
-        height: 50vh;
-        max-width: 100%;
-        background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
     display: -webkit-box;
-    
+
     display: -ms-flexbox;
-    
+
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
 }
 
 .content-image-right {
-    height: auto;
-    width: 50%;
-    float: right;
-    margin-left: 5px;
+  height: auto;
+  width: 50%;
+  float: right;
+  margin-left: 5px;
 }
 
 .content-image {
-    height: auto;
-    width: auto;
-    margin-bottom: 1rem;
+  height: auto;
+  width: auto;
+  margin-bottom: 1rem;
 }
 
 /* Jordan Page CSS Ends */
@@ -343,27 +399,32 @@ body {
 /* Nike Page CSS Starts */
 
 .nike-heroimage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/nike-heroimage.jpg");
-    height: 50vh;
-    max-width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/nike-heroimage.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/nike-heroimage.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/nike-heroimage.jpg");
+  height: 50vh;
+  max-width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* Nike Page CSS Ends */
@@ -371,47 +432,47 @@ body {
 /* Page Heading CSS Starts */
 
 .heroimage-text h2 {
-    letter-spacing: 1px;
-    font-weight: 700;
-    color: white;
-    font-size: 5rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: white;
+  font-size: 5rem;
 }
 
 @media (max-width: 768px) {
-    .heroimage-text h2 {
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: white;
-        font-size: 3.5rem;
-    }
+  .heroimage-text h2 {
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    font-size: 3.5rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .heroimage-text h2 {
-        letter-spacing: 1px;
-        font-weight: 700;
-        color: white;
-        font-size: 2.5rem;
-        margin-top: 10px;
-    }
+  .heroimage-text h2 {
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
 }
 
 .page-heading {
-    margin-top: 3rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    color: #fafafa;
-    font-size: 1.3rem;
+  margin-top: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: #fafafa;
+  font-size: 1.3rem;
 }
 
 @media (max-width: 540px) {
-    .page-heading {
-        margin-top: 3rem;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 900;
-        color: #fafafa;
-        font-size: 1rem;
-    }
+  .page-heading {
+    margin-top: 3rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color: #fafafa;
+    font-size: 1rem;
+  }
 }
 
 /* Page Heading CSS Ends */
@@ -419,78 +480,125 @@ body {
 /* Signup Page CSS Starts */
 
 .signup-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/signup-heroimage.jpg");
-    height: 95vh;
-    max-width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/signup-heroimage.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/signup-heroimage.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/signup-heroimage.jpg");
+  height: 95vh;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .form-container {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: rgba(4, 4, 4, 0.507);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(4, 4, 4, 0.507);
 }
 
 .form-group input {
-    width: 50%;
-    border: none;
-    padding: 2px;
-    color: #fafafa;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    background-color: rgba(4, 4, 4, 0.761);
-    border-bottom: 3px solid white;
+  width: 50%;
+  border: none;
+  padding: 2px;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: rgba(4, 4, 4, 0.761);
+  border-bottom: 3px solid white;
 }
 
 @media (max-width: 576px) {
-.form-group input {
+  .form-group input {
     width: 80%;
     border: none;
     padding: 2px;
     color: #fafafa;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.3rem;
     background-color: rgba(4, 4, 4, 0.761);
     border-bottom: 3px solid white;
-    }
+  }
 }
 
 .label {
-    color: #fafafa;
-    font-size: 1.5rem;
+  color: #fafafa;
+  font-size: 1.5rem;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+input:focus::-ms-input-placeholder {
+  color: transparent;
 }
 
 input:focus::placeholder {
-    color: transparent;
+  color: transparent;
+}
+
+input::-webkit-input-placeholder {
+  color: #818181;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+input::-moz-placeholder {
+  color: #818181;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+input:-ms-input-placeholder {
+  color: #818181;
+  -ms-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+input::-ms-input-placeholder {
+  color: #818181;
+  -ms-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 input::placeholder {
-    color: #818181;
-    transition: color 0.3s ease;
+  color: #818181;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .input-text {
-    color: white;
-    font-size: 0.7rem;
+  color: white;
+  font-size: 0.7rem;
 }
 
 /* Signup Page CSS Ends */
@@ -498,28 +606,33 @@ input::placeholder {
 /* Login Page CSS Starts */
 
 .login-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/login-heroimage.jpg");
-    height: 95vh;
-    max-width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/login-heroimage.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/login-heroimage.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/login-heroimage.jpg");
+  height: 95vh;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* Login Page CSS Ends */
@@ -527,135 +640,146 @@ input::placeholder {
 /* Account Page CSS Starts */
 
 .account-container {
-    min-height: 87vh;
+  min-height: 87vh;
 }
 
 /*  Account Page CSS Ends */
 
-/* The Wall Page CSS Starts */ 
+/* The Wall Page CSS Starts */
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .card-body {
-    padding: 5px;
+  padding: 5px;
 }
 
 .card {
-    background-color: #060606;
-    background-clip: border-box;
-    border: 1.5px solid rgba(228, 32, 32, 0.836);
-    border-radius: .35rem;
+  background-color: #060606;
+  background-clip: border-box;
+  border: 1.5px solid rgba(228, 32, 32, 0.836);
+  border-radius: 0.35rem;
 }
 
 .card-author {
-    color: rgb(213, 213, 213);
-    font-size: .7rem;
+  color: rgb(213, 213, 213);
+  font-size: 0.7rem;
 }
 
 .card-title {
-    font-size: 1rem;
-    font-weight: 900;
+  font-size: 1rem;
+  font-weight: 900;
 }
 
 .card-content {
-    font-size: .9rem;
-    font-weight: 100;
-    color: #cfcfcf;
+  font-size: 0.9rem;
+  font-weight: 100;
+  color: #cfcfcf;
 }
 
 .search-input {
-    margin-top: 2rem;
-    width: 100%;
-    border: none;
-    padding: 2px;
-    color: #fafafa;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    background-color: rgba(4, 4, 4, 0.761);
-    border-bottom: 3px solid white;
+  margin-top: 2rem;
+  width: 100%;
+  border: none;
+  padding: 2px;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: rgba(4, 4, 4, 0.761);
+  border-bottom: 3px solid white;
 }
 
 .button-container {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* The Wall Page CSS Ends */
 
 .newpost-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/account-heroimage.jpg");
-    height: 95vh;
-    max-width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/account-heroimage.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/account-heroimage.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/account-heroimage.jpg");
+  height: 95vh;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* Edit Post Page CSS Ends */
 
 .editpost-container {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/editpost-heroimage.jpg");
-    height: 95vh;
-    max-width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    
-    display: -webkit-box;
-    
-    display: -ms-flexbox;
-    
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/editpost-heroimage.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/editpost-heroimage.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/editpost-heroimage.jpg");
+  height: 95vh;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .form-control {
-    border: none;
-    padding: 2px;
-    color: #fafafa;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    background-color: rgba(4, 4, 4, 0.761);
-    border-bottom: 3px solid white;
+  border: none;
+  padding: 2px;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: rgba(4, 4, 4, 0.761);
+  border-bottom: 3px solid white;
 }
 
 .form-control:focus {
-    border: none;
-    padding: 2px;
-    color: #fafafa;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    background-color: rgba(4, 4, 4, 0.761);
-    border-bottom: 3px solid white;
-    box-shadow: none;
+  border: none;
+  padding: 2px;
+  color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: rgba(4, 4, 4, 0.761);
+  border-bottom: 3px solid white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 /* Edit Post Page CSS Ends */
@@ -663,12 +787,12 @@ ul {
 /* JS Animation Starts */
 
 span {
-    text-shadow: 1px 1px 5px #000000a6;
-    transition: all 0.5s ease;
+  text-shadow: 1px 1px 5px #000000a6;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 span.red-animation {
-    text-shadow: 1px 1px 2px #ff0000;
+  text-shadow: 1px 1px 2px #ff0000;
 }
-
-/* JS Animation Ends */
