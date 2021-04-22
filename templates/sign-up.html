@@ -5,7 +5,7 @@
 <!-- Registration Form Starts -->
     <div class="signup-container container-fluid">
         <div class="row justify-content-center">
-            <div class="col-sm-12 col-md-8 col-lg-6 justify-content-center">
+            <div class="col-12 justify-content-center">
                 <div class="heroimage-text text-center">
                     <h2 class="heading-lobster animation">
                         Sign Up with Air Town!
@@ -45,10 +45,13 @@
                             <button type="submit" class="btn btn-danger text-center">Sign Up</button>
                         </div>
                     </form>
-                </div>    
-                <p class="content text-center">
-                    Already have an account with Air Town ? <span class="text-lobster"><a href="{{ url_for('login') }}">Log In</a></span>
-                </p>
+                </div>
+                <div class="text-center">
+                    <p class="content text-center">
+                        Already have an account with Air Town ? 
+                    </p>
+                    <a class="link-text" href="{{ url_for('login') }}">Log In</a>
+                </div>
             </div>
         </div>
     </div>
