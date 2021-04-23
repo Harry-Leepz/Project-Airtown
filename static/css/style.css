@@ -696,6 +696,9 @@ ul {
   margin-bottom: 2rem;
 }
 
+.wall-container {
+  min-height: 70vh;
+}
 /* The Wall Page CSS Ends */
 
 .newpost-container {

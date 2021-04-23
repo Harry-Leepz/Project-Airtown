@@ -41,45 +41,53 @@
         </div>
     </div>
 
-
+    {% if posts|length > 0%}
 <!-- The Wall Post Section Starts -->
-    <div class="container-fluid wall-container">
-        <div class="row justify-content-center">
-            <div class="col-md-10 col-sm-12 col-lg-6 col-12">
-                {% if session.user %}
-                    <a href="{{ url_for('new_post') }}" class="btn btn-danger text-right">Create New Post</a>
-                {% endif %}
-                <!-- Posts Starts -->
-                <ul>
-                    {% for post in posts %}
-                        <li>
-                            <div class="card text-white mt-1 mb-1">
-                                <div class="card-body">
-                                    <p class="card-author">
-                                        Posted by {{ post.post_author.capitalize() }} on {{ post.post_date }}
-                                    </p>  
-                                    <h5 class="card-title">
-                                            {{ post.post_title }} - {{ post.category_name }}
-                                    </h5>
-                                    <p class="card-content">
-                                        {{ post.post_content }}
-                                    </p>
+        <div class="container-fluid wall-container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-sm-12 col-lg-6 col-12">
+                    {% if session.user %}
+                        <a href="{{ url_for('new_post') }}" class="btn btn-danger text-right">Create New Post</a>
+                    {% endif %}
+                    <!-- Posts Starts -->
+                    <ul>
+                        {% for post in posts %}
+                            <li>
+                                <div class="card text-white mt-1 mb-1">
+                                    <div class="card-body">
+                                        <p class="card-author">
+                                            Posted by {{ post.post_author.capitalize() }} on {{ post.post_date }}
+                                        </p>  
+                                        <h5 class="card-title">
+                                                {{ post.post_title }} - {{ post.category_name }}
+                                        </h5>
+                                        <p class="card-content">
+                                            {{ post.post_content }}
+                                        </p>
+                                    </div>
+                                    {% if session.user|lower == post.post_author|lower %}
+                                    <div class="card-footer text-center">
+                                        <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post</a>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                                            Delete Post
+                                        </button>
+                                    </div>
+                                    {% endif %}
                                 </div>
-                                {% if session.user|lower == post.post_author|lower %}
-                                <div class="card-footer text-center">
-                                    <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post</a>
-                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
-                                        Delete Post
-                                    </button>
-                                </div>
-                                {% endif %}
-                            </div>
-                        </li>   
-                    {% endfor %}    
-                </ul>
+                            </li>   
+                        {% endfor %}    
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    {% else %}    
+        <div class="text-center">
+            <h2 class="page-heading heading">
+                Sorry, No results found!
+            </h2>
+        </div>
+    {% endif %} 
+
 
 {% for post in posts %}
     {% if session.user|lower == post.post_author|lower %}
