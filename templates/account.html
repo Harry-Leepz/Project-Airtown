@@ -10,40 +10,52 @@
                         {{ username.capitalize() }}'s Account
                     </h2>
                 </div>
-                <div class="text-center">
-                    <h4 class="page-heading heading">
-                        Below are a list of you posts made on The Wall 
-                    </h4>
-                </div>
+                
+                {% if posts|length > 0 %}
+                    <div class="text-center">
+                        <h4 class="page-heading heading">
+                            Below are a list of you posts made on The Wall 
+                        </h4>
+                    </div>
                 <!-- Posts Starts -->
-                <ul>
-                    {% for post in posts %}
-                        {% if session.user|lower == post.post_author|lower %}
-                            <li>
-                                <div class="card text-white mt-1 mb-1">
-                                    <div class="card-body">
-                                        <p class="card-author">
-                                            Posted by {{ post.post_author.capitalize() }} on {{ post.post_date }}
-                                        </p>
-                                        <h5 class="card-title">
-                                            {{ post.post_title }} - {{ post.category_name }}
-                                        </h5>
-                                        <p class="card-content">
-                                            {{ post.post_content }}
-                                        </p>
+                    <ul>
+                        {% for post in posts %}
+                            {% if session.user|lower == post.post_author|lower %}
+                                <li>
+                                    <div class="card text-white mt-1 mb-1">
+                                        <div class="card-body">
+                                            <p class="card-author">
+                                                Posted by {{ post.post_author.capitalize() }} on {{ post.post_date }}
+                                            </p>
+                                            <h5 class="card-title">
+                                                {{ post.post_title }} - {{ post.category_name }}
+                                            </h5>
+                                            <p class="card-content">
+                                                {{ post.post_content }}
+                                            </p>
+                                        </div>
+                                        {% if session.user|lower == post.post_author|lower %}
+                                        <div class="card-footer text-center">
+                                            <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post </a>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete Post</button>
+                                        </div>
+                                        {% endif %}
                                     </div>
-                                    {% if session.user|lower == post.post_author|lower %}
-                                    <div class="card-footer text-center">
-                                        <a href="{{ url_for('edit_post', post_id=post._id) }}" class="btn btn-secondary text-right">Edit Post </a>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">Delete Post</button>
-                                    </div>
-                                    {% endif %}
-                                </div>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-                <!-- Posts Ends -->       
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                <!-- Posts Ends -->
+                {% else %}
+                <!-- Small heading to notify the User they have made no posts -->
+                <div class="text-center">
+                    <h2 class="page-heading heading">
+                       Usually this area is stacked with your posts, but as you have yet to leave your mark on The Wall, we have give you a button to take you there below!
+                    </h2>
+                    <a class="btn btn-danger" href="{{ url_for('the_wall') }}">The Wall</a>
+                </div>
+
+                {% endif %}
             </div>
         </div>
     </div>

@@ -105,7 +105,9 @@ def account(username):
     # Obtaining the session user from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    posts = list(mongo.db.posts.find().sort("post_date", -1))
+
+    posts = list(mongo.db.posts.find(
+        {"post_author": session["user"]}).sort("post_date", -1))
     return render_template("account.html", posts=posts, username=username)
 
 
