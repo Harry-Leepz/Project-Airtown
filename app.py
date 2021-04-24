@@ -56,7 +56,6 @@ def sign_up():
             # and redirect back to signup page
             flash("Username already exists, Please try another Username")
             return redirect(url_for("sign_up"))
-
         # Take user input and place as users in database
         sign_up = {
             "username": request.form.get("username").lower(),
@@ -65,7 +64,6 @@ def sign_up():
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(sign_up)
-
         # Place new user into "session" cookie
         session["user"] = request.form.get("username").lower()
         flash("Sign Up complete, Welcome to Air Town")
@@ -105,13 +103,12 @@ def account(username):
     # Obtaining the session user from the database
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-
     posts = list(mongo.db.posts.find(
         {"post_author": session["user"]}).sort("post_date", -1))
     return render_template("account.html", posts=posts, username=username)
 
 
-@app.route("/logout")
+@app.route("/signout")
 def signout():
     # Removing the user from the session cookie
     flash("You have been signed out")
@@ -182,6 +179,16 @@ def delete_post(post_id):
     mongo.db.posts.remove({"_id": ObjectId(post_id)})
     flash("Post Deleted!")
     return redirect(url_for("the_wall"))
+
+
+@app.errorhandler(404)
+def not_found(error):
+    return render_template('404.html', error=error), 404
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    return render_template('500.html', error=error), 500
 
 
 if __name__ == "__main__":
