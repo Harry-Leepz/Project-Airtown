@@ -696,10 +696,9 @@ ul {
   margin-bottom: 2rem;
 }
 
-.wall-container {
-  min-height: 70vh;
-}
 /* The Wall Page CSS Ends */
+
+/* New Post Page CSS Starts */
 
 .newpost-container {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
@@ -731,7 +730,9 @@ ul {
   justify-content: center;
 }
 
-/* Edit Post Page CSS Ends */
+/* New Post Page CSS Ends */
+
+/* Edit Post Page CSS Starts */
 
 .editpost-container {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
@@ -787,6 +788,40 @@ ul {
 
 /* Edit Post Page CSS Ends */
 
+/* Error Page CSS Starts */
+
+.error-container {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))),
+    url("/static/images/error-heroimage.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/error-heroimage.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/static/images/error-heroimage.jpg");
+  height: 95vh;
+  max-width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* Error Page CSS Ends */
+
 /* JS Animation Starts */
 
 span {
@@ -799,3 +834,5 @@ span {
 span.red-animation {
   text-shadow: 1px 1px 2px #ff0000;
 }
+
+/* JS Animation Ends */
