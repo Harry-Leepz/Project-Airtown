@@ -129,7 +129,7 @@ The text will be consistent on all pages with a centered title, small centered s
 
 **Database Structure**
 
- [Link to Diagram of Database Structure](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/airtown-tables.pdf)
+ [Link to Diagram of Database Structure](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/airtown-db.pdf)
 
 *Users*
 ```
@@ -322,7 +322,21 @@ The decision to make changes from the conceptual design generally came down to u
  
 ---
 
-## **Testing** ##
+## **Testing** 
 
+Testing files are in PDF format and will be linked below.
+To test the project, testing is split into multiple instances, 
+- User Story Testing
+- Lighthouse Performance Testing
+- Database CRUD Functionality Testing
+- Project Input Field Testing
+- HTML / CSS / JavaScript / Python all checked with validators.
 
-*User Stories and Creator Goals*
+### *User Story Testing*
+
+[Link to User Story Testing PDF](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/user-stories.pdf)
+
+- All User Stories were tested and passed. 
+
+### *Lighthouse Performance Testing*
+
