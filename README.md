@@ -340,3 +340,29 @@ To test the project, testing is split into multiple instances,
 
 ### *Lighthouse Performance Testing*
 
+[Link to Lighthouse Testing PDF](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/lighthouse.pdf)
+
+- Overall performance for the project exceeded expectations.
+
+### *Database CRUD Functionality Testing*
+
+
+To test database functionality for the project,
+1. Create a new User account.
+    - Check new user appears in user collection in MongoDB.
+2. If after creating an account I am signed in, I will sign out and try to log back in to check for any errors.
+
+3. Create a post on the Wall. 
+    - Check to see if the post correctly appears in the posts collection in MongoDB. 
+4. Edit the post. 
+    - Check to see if the post is correctly edited in the posts collection in MongoDB.
+5. Delete the post.
+    - Check to see if the post is correctly removed from posts collection in MongoDB. 
+
+The user account I will create for testing purposes will be for the actor Will Smith.
+
+The post will be titled as Fresh Prince of Bel-air, post contents will be the lyrics on the intro from the TV show. 
+
+After editing the post title will be Wild Wild West, post content will edited to "Will Smith is a actor".
+
+[Link to Lighthouse Testing PDF](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/lighthouse.pdf)
