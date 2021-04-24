@@ -155,7 +155,6 @@ The text will be consistent on all pages with a centered title, small centered s
     "post_title": "Check me Out",
     "category_name": "Humble Brag",
     "post_content": "Hey, This is my test post!",
-    "image": ""
 }
 ```
 
@@ -322,3 +321,8 @@ The decision to make changes from the conceptual design generally came down to u
     - Used to fix the thousands of grammar errors across the project.
  
 ---
+
+## **Testing** ##
+
+
+*User Stories and Creator Goals*
