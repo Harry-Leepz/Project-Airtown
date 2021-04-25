@@ -647,6 +647,10 @@ input::placeholder {
 
 /* The Wall Page CSS Starts */
 
+.wall-container {
+  min-height: 70vh;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
