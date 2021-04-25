@@ -420,10 +420,21 @@ Real world testing was done on my home desktop, Iphone 11 and Samsung A50.
 
 *Known Bugs and Fixes*
 
-This following issues are present on the create post and edit post pages,
+**The following issues are present on the create post and edit post pages,**
 
 - As of 25/04/2021, Users are able to post blank posts due to pattern attribute causing an error on the textarea element on HTML Validator.
 - As of 25/04/2021, Users are able to leave blank post titles with empty spaces. 
     - I wanted to allow users to post titles with text/numbers/spaces. And have not been able to implement a correct pattern attribute to the post title to allow this.
 
+**The following bugs were fixed,**
+
+- Hero Images on iphones appeared very zoomed in, this appeared to be an issue with `background-attachment: fixed;` in the CSS for the image containers.
+    - `background-attachment: fixed;` removed to fix hero images on iphones.
+
+![Hero Image Fix](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/iphone11fix.png)
+
+- Wall Page had the footer appearing higher than normal due to lack on content to keep the footer at the bottom on the viewport.
+    - `.wall-container` class given `min-height: 70vh;`. The `wall-container` class is added to div elements on the wall page to push the footer lower down the page.
+
+![Wall Page Footer Fix](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/wall-fix.png)
 
