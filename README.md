@@ -371,4 +371,9 @@ After editing the post title will be Wild Wild West, post content will edited to
 
 ### *Project Input Field Testing*
 
+- Users have information text relating to the input fields, if any inputhas a restriction on character type or limit.
+- Input fields correctly restrict user input when maximum character count is met.
+- Input fields correctly display an error if user attempts to you special charcaters.
+- **Text area input field correctly requires the minimum amount of characters but users are still able to post with empyty spaces.
+
 ### *Further Testing...*

@@ -18,8 +18,8 @@
                         <div class="form-group text-center">
                         <!-- Post Title-->
                             <input class="" maxlength="50" minlength="5" id="post_title" name="post_title"
-                            type="text" placeholder="Give your post a title!" value="{{ post.post_title }}" required>
-                            <p class="input-text"> Between 5-15 characters</p>
+                            type="text" placeholder="Give your post a title!"  pattern="^[a-zA-Z0-9]{5,50}$" value="{{ post.post_title }}" required>
+                            <p class="input-text"> Between 5-50 characters</p>
                         </div>
                         <!-- Post Category Selection-->
                         <div>
@@ -42,7 +42,7 @@
                         <!-- Post Content-->
                         <div class="form-group">
                             <textarea rows="3" class="form-control" minlength="5" maxlength="500" id="post_content"
-                                name="post_content" type="text" placeholder="Your thoughts!" required>
+                                name="post_content" type="text" placeholder="Your thoughts!"  pattern="^[a-zA-Z0-9]{5,500}$" required>
                             {{- post.post_content -}}
                             </textarea>
                             <p class="input-text"> Between 5-500 characters</p>
