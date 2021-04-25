@@ -438,3 +438,14 @@ Real world testing was done on my home desktop, Iphone 11 and Samsung A50.
 
 ![Wall Page Footer Fix](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/wall-fix.png)
 
+- HTML Validator brought up an error due to a `placeholder` attribute added to select elements on the create post and edit post pages.
+    - `placeholder` attribute removed to fix HTML errors.
+- HTML Validator brought up an error due to a `type` attribute added to textarea elements on the create post and edit post pages.
+    - `type` attribute removed to fix HTML errors.
+- HTML Validator brought up an error due to a `pattern` attribute added to textarea elements on the create post and edit post pages.
+    - `pattern` attribute removed to fix HTML errors.
+- Tab title not correctly updating due to how Jinja2 inheritence was working with the base template.
+    - `{% block title %}` added to base.html template. Allowing templates inheriting from the base template to have their title updated per page.
+
+## **Deployment** 
+
