@@ -315,7 +315,7 @@ The decision to make changes from the conceptual design generally came down to u
     - Used to create the wireframes for the project.
 
 - [AutoPrefixer](https://autoprefixer.github.io/)
-    - Used to parse my CSS and ass vendor prefixes.
+    - Used to parse my CSS and add vendor prefixes.
 
 - [Grammarly](https://www.grammarly.com/)
     - Used to fix the thousands of grammar errors across the project.
@@ -377,3 +377,17 @@ After editing the post title will be Wild Wild West, post content will edited to
 - **Text area input field correctly requires the minimum amount of characters but users are still able to post with empyty spaces.
 
 ### *Further Testing...*
+
+[W3C Markup Validator](https://validator.w3.org/)
+- All pages of the project were checked and any errors and warnings were fixed. 
+- All pages pass with no errors or warnings.
+
+[W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- style.css page was checked and any errors were fixed.
+- No errors are found.
+- 153 Warnings, all warnings are related to vendor prefixes added by CSS Auro Prefixer.
+- CSS pass with warnings as the vendor prefixes are required to support browser compatibility efforts.
+
+[JSHint JavaScript Validator](https://jshint.com/)
+- script.js page pass with no errors or warnings.
+
