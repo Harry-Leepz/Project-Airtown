@@ -449,3 +449,72 @@ Real world testing was done on my home desktop, Iphone 11 and Samsung A50.
 
 ## **Deployment** 
 
+The master branch of this repository is the most current version and has been used for the deployed version of the site.
+
+The Code Institiue student template was used to create this project. 
+
+[Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+- Click the *Use This Template* button.
+- Give your repository a name, and description if you wish.
+- Click the *Create Repository from Template* to create your repository. 
+- Click the *Gitpod* button to create a gitpod workspace, this can take a few minutes.
+- When working on project using Gitpod, please open the workspace from Gitpod, this will open your previous workspace rather than creating a new one.
+Use the following commands to commit your work, 
+- `git add . ` - adds all modified files to a staging area.
+- `git commit -m "A short message exlaining your commit"` - commits all changes to a local repository.
+- `git push` - pushes all your commited changes to your Github repository.
+
+**Creating an Application with Heroku,**
+
+- Goto [Heroku.com](https://www.heroku.com/) and create an account or login. 
+- Click the *New* dropdown and select *Create New App*.
+- Enter a name for the project.
+- Select your region.
+
+**Connecting your Heroku account to your Github Repository,**
+
+- Click on *Deploy* tab and choose `Github-Connect to Github`.
+- Enter the GitHub repository name and click on *Search*.
+- Once the correct repository is found, click on *Connect*.
+
+**Setting you Enviroment Variables**
+
+- In the *Settings* tab, click on *Reveal Config Vars* and set the following variables,
+- IP : 0.0.0.0
+- PORT : 5000
+- MONGO_DBNAME : *Your MongoDB database name*
+- MONGO_URI :  *This can be found on MongoDB, goto to clusters -> connect -> connect to your application*
+    - Please remember to update the URI with your database name and password.
+- SECRET_KEY : *This is a custom key of your choosing to keep sessions secure* 
+
+**PLEASE NOTE TO SUCCESFULLY DEPLOY WITH HEROKU, YOUR PROJECT MUST HAVE A *requirements.txt*  and *Procfile* files.**
+
+The following commands in the Gitpod CLI will create the relevant files.
+
+`pip3 freeze --local > requirements.txt`
+
+`echo web: python app.py > Procfile`
+
+**Running this Project Locally**
+
+**You will need create a env.py file, which contains all the enviroment variables you used on Heroku, Please note this file should be added to a .gitignore file to prevent the file from being commited.** 
+
+THESE DETAILS SHOULD BE PRIVATE AND SHOULD NOT BE DISCLOSED FOR SECURITY PURPOSES!
+
+- Navigate to the Github repository. 
+- Click the *Code*.
+- If you choose to download the zip file, you can unpackage this in Gitpod.
+- If you choose to copy the Git URL, please continue to follow the steps below.
+- In Gitpod, in the CLI type `git clone "Git URL"`.
+- This will now create a clone of the project on your machine. 
+
+Once the project has been loaded please run the following command in the CLI to install the project required packages, 
+
+`pip install -r requirements.txt`
+
+**Creating a Fork of the Project in your Github Repositories**
+
+- Head over to the Github Repository.
+- In the top right, just under your profile you have a "Fork" button.
+- Clicking the "Fork" button will create a copy of the project in your repository.
