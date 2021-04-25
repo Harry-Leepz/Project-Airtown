@@ -374,7 +374,7 @@ After editing the post title will be Wild Wild West, post content will edited to
 - Users have information text relating to the input fields, if any inputhas a restriction on character type or limit.
 - Input fields correctly restrict user input when maximum character count is met.
 - Input fields correctly display an error if user attempts to you special charcaters.
-- **Text area input field correctly requires the minimum amount of characters but users are still able to post with empyty spaces.
+- **Text area input field correctly requires the minimum amount of characters but users are still able to post with empty spaces.
 
 ### *Further Testing...*
 
@@ -390,4 +390,40 @@ After editing the post title will be Wild Wild West, post content will edited to
 
 [JSHint JavaScript Validator](https://jshint.com/)
 - script.js page pass with no errors or warnings.
+
+The following browsers were used to test the project, 
+- Google Chrome 
+- Opera
+- Mozilla Firefox
+- Microsoft Edge
+The project passed all tests on the browsers listed above.
+
+Google Chrome Developer tools was used to test the resposiveness of the project on the following emulated devices, 
+- Apple Ipad
+- Apple Ipad Pro
+- Microsoft Surface Duo
+- Motorola G4
+- Samsung Galaxy S5
+- Google Pixel 2 
+- Google Pixel 2 XL
+- Iphone 5/SE
+- Iphone 6/7/8
+- Iphone 6/7/8 PLUS
+- Iphone X
+- Galaxy Fold
+
+Real world testing was done on my home desktop, Iphone 11 and Samsung A50.
+- Home desktop specs,
+    - Intel Core i7-7700K @ 4.20GHz
+    - 16GB RAM
+    - GTX 1070 GPU
+
+*Known Bugs and Fixes*
+
+This following issues are present on the create post and edit post pages,
+
+- As of 25/04/2021, Users are able to post blank posts due to pattern attribute causing an error on the textarea element on HTML Validator.
+- As of 25/04/2021, Users are able to leave blank post titles with empty spaces. 
+    - I wanted to allow users to post titles with text/numbers/spaces. And have not been able to implement a correct pattern attribute to the post title to allow this.
+
 
