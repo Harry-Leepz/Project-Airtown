@@ -518,3 +518,49 @@ Once the project has been loaded please run the following command in the CLI to 
 - Head over to the Github Repository.
 - In the top right, just under your profile you have a "Fork" button.
 - Clicking the "Fork" button will create a copy of the project in your repository.
+
+## **Credits**
+
+**Code**
+
+- [Code Institute](https://codeinstitute.net/)
+    - The back-end section of this project was built upon the Task Manager walkthrough project.
+
+- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+    - Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+
+**Media**
+
+- [Pexels](https://www.pexels.com/) / [Unsplash](https://unsplash.com/)
+    - All images used throughout the project were used from either Unsplash or Pexels.
+
+**Content**
+
+- [Nike](https://www.nike.com/gb/help/a/nikeinc-mission)
+    - The official Nike website was used to provide the content related to the Nike brand page.
+
+- [Jordan](https://www.nike.com/gb/jordan/community)
+    - The official Jordan website was used to provide the content related to the Jordan brand Page.
+
+
+**Acknowledgments**
+
+- Aaron Sinnot 
+    - My mentor on the course. A huge help contantly and always providing great feedback and constantly providing resources help me.
+
+- Code Institute Tutor Team
+    - On a few occasions the tutor team has helped me resolve issues relating to the project. Special shoutout to Tim and Fahima.
+
+- Ed Bradley
+    - The channel lead for this project on Slack, Has always been happy to reply, offering me solutions to to a few issues I had, another persona happy to provide feedback and share resources.
+
+- Jane Rinn
+    - Not enough words of gratitude, she has been willing to offer feedback and perhaps the person I turn to most when things don't quite work out.
+
+- Greta Egan
+    - Project wouldn't be possible without Greta, Originally when I pitched the idea of the project to her and was skeptical, she was person who encouraged me to go ahead with it.
+
+
+Finally all glory goes to God. 
+
+Thank you for taking your time to view this project, I hope you have learnt something and perhaps found your love for sneakers, if so please feel free to leave a post. 
