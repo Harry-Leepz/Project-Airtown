@@ -1,6 +1,7 @@
 # **Air Town**
 
 ![Project Image](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/welcome-image.png)
+![Project Responsive Image](https://github.com/Harry-Leepz/Project-Airtown/blob/master/documentation/project-image.png)
 
 ## **Introduction**
 
