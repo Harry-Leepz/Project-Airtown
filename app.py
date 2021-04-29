@@ -170,7 +170,7 @@ def edit_post(post_id):
     post = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template(
-        "edit-post.html", post=post, categories=categories)
+        "wall.html", post=post, categories=categories)
 
 
 @app.route("/delete_post/<post_id>")
@@ -194,4 +194,4 @@ def internal_error(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
