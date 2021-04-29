@@ -170,7 +170,7 @@ def edit_post(post_id):
     post = mongo.db.posts.find_one({"_id": ObjectId(post_id)})
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template(
-        "wall.html", post=post, categories=categories)
+        "edit-post.html", post=post, categories=categories)
 
 
 @app.route("/delete_post/<post_id>")
